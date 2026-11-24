@@ -3,8 +3,7 @@
 Программа для Windows, которая проверяет моды The Sims 4, находит сломанные и конфликтующие, помогает
 вернуть игру к рабочему состоянию.
 
-**Скачать:** [последняя версия](https://github.com/leva000111/Sims4ModDoctor-App/releases/latest) →
-`Sims4ModDoctor.exe`. Программа обновляется сама.
+⬇ **[Скачать Sims4ModDoctor.exe](https://github.com/leva000111/Sims4ModDoctor-App/releases/latest/download/Sims4ModDoctor.exe)** — один файл, без установки. Программа обновляется сама.
 
 🌐 **Сайт:** https://leva000111.github.io/Sims4ModDoctor-App/ · 📰 [Канал](https://t.me/sims4moddoctor) · 💬 [Сообщество](https://t.me/sims4moddoctor_chat)
 
