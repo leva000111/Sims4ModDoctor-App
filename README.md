@@ -5,7 +5,7 @@
 
 ⬇ **[Скачать Sims4ModDoctor.exe](https://github.com/leva000111/Sims4ModDoctor-App/releases/latest/download/Sims4ModDoctor.exe)** — один файл, без установки. Программа обновляется сама.
 
-🌐 **Сайт:** https://leva000111.github.io/Sims4ModDoctor-App/ · 📰 [Канал](https://t.me/sims4moddoctor) · 💬 [Сообщество](https://t.me/sims4moddoctor_chat)
+🌐 **Сайт:** https://sims4moddoctor.pages.dev · 📰 [Канал](https://t.me/sims4moddoctor) · 💬 [Сообщество](https://t.me/sims4moddoctor_chat)
 
 ## Бесплатно
 
