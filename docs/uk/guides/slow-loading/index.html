@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sims 4 довго завантажується з модами: як пришвидшити | Sims 4 Mod Doctor</title>
+<meta name="description" content="Гра вантажиться 10–15 хвилин? Розбираємо, що гальмує завантаження з модами: тисячі дрібних файлів CC, важкі скрипти, кеш, повільний диск — і як це виправити.">
+<meta property="og:title" content="Sims 4 довго завантажується з модами: як пришвидшити">
+<meta property="og:description" content="Гра вантажиться 10–15 хвилин? Розбираємо, що гальмує завантаження з модами: тисячі дрібних файлів CC, важкі скрипти, кеш, повільний диск — і як це виправити.">
+<meta property="og:image" content="https://sims4moddoctor.com/img/uk/home.webp">
+<meta property="og:url" content="https://sims4moddoctor.com/uk/guides/slow-loading/">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://sims4moddoctor.com/uk/guides/slow-loading/">
+<link rel="icon" href="/img/favicon.png">
+<link rel="alternate" hreflang="ru" href="https://sims4moddoctor.com/guides/slow-loading/">
+<link rel="alternate" hreflang="en" href="https://sims4moddoctor.com/en/guides/slow-loading/">
+<link rel="alternate" hreflang="pt-BR" href="https://sims4moddoctor.com/pt/guides/slow-loading/">
+<link rel="alternate" hreflang="es" href="https://sims4moddoctor.com/es/guides/slow-loading/">
+<link rel="alternate" hreflang="de" href="https://sims4moddoctor.com/de/guides/slow-loading/">
+<link rel="alternate" hreflang="fr" href="https://sims4moddoctor.com/fr/guides/slow-loading/">
+<link rel="alternate" hreflang="pl" href="https://sims4moddoctor.com/pl/guides/slow-loading/">
+<link rel="alternate" hreflang="it" href="https://sims4moddoctor.com/it/guides/slow-loading/">
+<link rel="alternate" hreflang="uk" href="https://sims4moddoctor.com/uk/guides/slow-loading/">
+<link rel="alternate" hreflang="x-default" href="https://sims4moddoctor.com/en/guides/slow-loading/">
+<script>if(/\.pages\.dev$/.test(location.hostname))location.replace("https://sims4moddoctor.com"+location.pathname+location.search+location.hash)</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf8ff;--bg2:#f3edff;--card:#fff;--ink:#2a2344;--ink2:#5e577c;--line:#ebe4fb;--pink:#ff6fae;--pink2:#ffd2e7;--violet:#8b6cff;--violet2:#e7e0ff;--mint:#3fcf9d;--mint2:#d4f6e9;--sun:#ffc547;--sh:0 10px 30px rgba(110,80,200,.12);--r:22px}
+@media (prefers-color-scheme:dark){:root{--bg:#15121f;--bg2:#1d1830;--card:#221c35;--ink:#f1ecff;--ink2:#b5acd6;--line:#342c4f;--pink2:#4a2440;--violet2:#2f2656;--mint2:#183a30;--sh:0 10px 30px rgba(0,0,0,.35)}}
+*{box-sizing:border-box}
+body{margin:0;font-family:Nunito,system-ui,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:18px}
+a{color:var(--violet)}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+header.top .wrap{max-width:1160px;display:flex;align-items:center;gap:14px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:18px;text-decoration:none;color:var(--ink)}
+.logo img{width:38px;height:38px;border-radius:50%;box-shadow:0 3px 10px rgba(139,108,255,.35)}
+header.top nav{margin-left:auto;display:flex;gap:18px;align-items:center;font-weight:700}
+header.top nav a.lnk{text-decoration:none;color:var(--ink2)}header.top nav a.lnk:hover{color:var(--violet)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:800;text-decoration:none;border:0;font-size:16px;background:linear-gradient(135deg,var(--pink),var(--violet));color:#fff;box-shadow:0 10px 24px rgba(255,111,174,.35)}
+.btn.sm{padding:9px 16px;font-size:14px}
+@media (max-width:640px){header.top nav a.lnk{display:none}}
+.crumbs{font-size:14px;color:var(--ink2);margin:26px 0 0}.crumbs a{color:var(--ink2)}
+h1{font-size:clamp(30px,4.6vw,44px);line-height:1.12;margin:14px 0 12px;font-weight:900;letter-spacing:-.3px}
+.lead{font-size:20px;color:var(--ink2);margin:0 0 8px}
+.meta{font-size:14px;color:var(--ink2);margin-bottom:26px}
+article h2{font-size:27px;line-height:1.2;margin:38px 0 10px;font-weight:900}
+article h3{font-size:21px;margin:26px 0 8px}
+article p,article li{color:var(--ink)}
+article li{margin:6px 0}
+article code{background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:1px 7px;font-size:.88em;word-break:break-word}
+article .tip,article .warn{border-radius:18px;padding:14px 18px;margin:18px 0;border:1px solid var(--line)}
+article .tip{background:var(--mint2)}article .warn{background:var(--pink2)}
+article .tip p,article .warn p{margin:0}
+article table{width:100%;border-collapse:collapse;margin:16px 0;font-size:16px}
+article th,article td{border:1px solid var(--line);padding:8px 10px;text-align:left;overflow-wrap:anywhere}article th{background:var(--bg2)}
+.cta{background:linear-gradient(135deg,var(--violet2),var(--pink2));border-radius:28px;padding:28px;margin:44px 0 10px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+.cta img{width:96px;height:96px;border-radius:50%;border:4px solid #fff;box-shadow:var(--sh)}
+.cta h2{margin:0 0 6px;font-size:24px}.cta p{margin:0 0 14px;color:var(--ink2)}.cta .note{font-size:13px;margin:10px 0 0}
+@media (max-width:600px){.cta{grid-template-columns:1fr;text-align:center}.cta img{margin:0 auto}}
+.related{margin:34px 0}.related h2{font-size:22px}
+.cards{display:grid;gap:14px}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:var(--sh);text-decoration:none;color:var(--ink)}
+.card b{display:block;font-size:19px;margin-bottom:4px}.card span{color:var(--ink2);font-size:15.5px}
+.card:hover b{color:var(--violet)}
+.langs{font-size:15px;color:var(--ink2);margin:26px 0}
+footer{padding:40px 0 60px;color:var(--ink2);font-size:14px;text-align:center}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Гра довго завантажується з модами: як пришвидшити","description":"Гра вантажиться 10–15 хвилин? Розбираємо, що гальмує завантаження з модами: тисячі дрібних файлів CC, важкі скрипти, кеш, повільний диск — і як це виправити.","inLanguage":"uk","datePublished":"2026-11-25","dateModified":"2026-11-25","image":"https://sims4moddoctor.com/img/uk/home.webp","mainEntityOfPage":"https://sims4moddoctor.com/uk/guides/slow-loading/","author":{"@type":"Organization","name":"Sims 4 Mod Doctor","url":"https://sims4moddoctor.com/"},"publisher":{"@type":"Organization","name":"Sims 4 Mod Doctor","url":"https://sims4moddoctor.com/","logo":{"@type":"ImageObject","url":"https://sims4moddoctor.com/img/favicon.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Головна","item":"https://sims4moddoctor.com/uk/"},{"@type":"ListItem","position":2,"name":"Інструкції","item":"https://sims4moddoctor.com/uk/guides/"},{"@type":"ListItem","position":3,"name":"Гра довго завантажується з модами: як пришвидшити"}]}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="/uk/"><img src="/img/avatar_channel.webp" alt="">Sims 4 Mod Doctor</a>
+  <nav><a class="lnk" href="/uk/guides/">Усі інструкції</a><a class="btn sm" href="https://github.com/leva000111/Sims4ModDoctor-App/releases/latest/download/Sims4ModDoctor.exe" download>⬇ Завантажити</a></nav>
+</div></header>
+<main class="wrap">
+<div class="crumbs"><a href="/uk/">Головна</a> › <a href="/uk/guides/">Інструкції</a> › Гра довго завантажується з модами: як пришвидшити</div>
+<article>
+<h1>Гра довго завантажується з модами: як пришвидшити</h1>
+<p class="lead">Кожна нова зачіска й кожен мод — це ще трохи роботи для гри під час запуску. Коли їх тисячі, завантаження розтягується на довгі хвилини. Добра новина: зазвичай його можна скоротити в рази, нічого не видаляючи.</p>
+<div class="meta">Оновлено: 25 листопада 2026</div>
+<h2>Що насправді гальмує завантаження</h2>
+<ul>
+<li><b>Кількість файлів, а не їхній розмір.</b> Тисяча маленьких файлів CC вантажиться помітно довше, ніж кілька великих з тим самим умістом: гра мусить відкрити й перевірити кожен.</li>
+<li><b>Моди-скрипти.</b> Деякі з них під час запуску довго «думають» — готують свої дані.</li>
+<li><b>Дублікати й старі версії.</b> Гра чесно вантажить і їх.</li>
+<li><b>Кеш.</b> З часом файли кешу розростаються й можуть сповільнювати запуск.</li>
+<li><b>Повільний диск.</b> Якщо папка «Документи» на старому жорсткому диску, а не на SSD, завантаження буде повільним за будь-якої кількості модів.</li>
+</ul>
+
+<h2>1. Прибери дублікати й старі версії</h2>
+<p>Це найбезпечніше пришвидшення: ти не втрачаєш нічого з того, чим користуєшся. Дублікати з’являються, коли той самий CC завантажено двічі або нова версія мода лягла поруч зі старою під іншою назвою.</p>
+
+<h2>2. Прибери те, чим не користуєшся</h2>
+<p>У багатьох у Mods лежать сотні речей, які давно ніхто не носить і ніде не ставить. Перенеси їх в окрему папку поза Mods — повернути можна будь-коли. Почни з цілих наборів, до яких ти давно не поверталася.</p>
+
+<h2>3. Об’єднай дрібні файли CC</h2>
+<p>Якщо в тебе тисячі файлів одягу, зачісок і меблів, їх можна склеїти в кілька великих файлів <code>.package</code>. Уміст не змінюється, а завантаження помітно пришвидшується. Важливо: об’єднуй лише CC, а не моди-скрипти й не моди, які часто оновлюються, — інакше після кожного оновлення доведеться збирати все заново.</p>
+
+<h2>4. Очисти кеш</h2>
+<p>Закрий гру й видали файл <code>localthumbcache.package</code> у папці <code>Документи\Electronic Arts\The Sims 4</code>. Гра створить його заново. Докладніше — в інструкції <a href="../clear-cache/">«Як очистити кеш Sims 4»</a>.</p>
+
+<h2>5. Знайди повільні моди-скрипти</h2>
+<p>Якщо завантаження стало довгим після встановлення конкретного мода — спробуй тимчасово прибрати його й порівняти. Коли модів-скриптів багато, простіше подивитися, які з них думають найдовше під час запуску.</p>
+
+<h2>6. Перевір диск</h2>
+<p>Якщо в комп’ютері є SSD, а «Документи» лежать на звичайному жорсткому диску, перенесення папки «Документи» на SSD пришвидшить завантаження сильніше за будь-які інші поради. Робиться це у властивостях папки «Документи» → вкладка «Розташування».</p>
+<div class="warn"><p>Перед перенесенням «Документів» зроби копію папки <code>The Sims 4</code>. І не тримай її «лише в хмарі» OneDrive — грі потрібні файли на диску.</p></div>
+
+<h2>Як пришвидшити завантаження з Sims 4 Mod Doctor</h2>
+<ul>
+<li><b>безкоштовно</b>: функція <b>«Що гальмує»</b> показує, скільки вантажиться гра, які моди-скрипти думають найдовше і чим ти взагалі не користуєшся, а перевірка модів знаходить дублікати й старі версії;</li>
+<li>у <b>PRO-версії</b>: <b>«Пришвидшити завантаження»</b> об’єднує тисячі дрібних файлів CC у кілька великих, а <b>«Мій CC»</b> показує, що ніхто не носить і ніде не стоїть.</li>
+</ul>
+<p>Усе прибране йде в карантин і повертається однією кнопкою.</p>
+</article>
+<div class="cta"><img src="/img/avatar_channel.webp" alt=""><div>
+  <h2>Нехай Доктор Модді перевірить за тебе</h2><p>Sims 4 Mod Doctor безкоштовно огляне папку Mods, знайде зламані, застарілі й зайві файли та прибере їх у карантин. Усе прибране повертається однією кнопкою.</p>
+  <a class="btn" href="https://github.com/leva000111/Sims4ModDoctor-App/releases/latest/download/Sims4ModDoctor.exe" download>⬇ Завантажити безкоштовно</a>
+  <p class="note">Windows 10/11 · один файл, без встановлення · перевірка модів безкоштовна назавжди</p>
+</div></div>
+
+<div class="related"><h2>Ще інструкції</h2><div class="cards"><a class="card" href="/uk/guides/mods-broken-after-patch/"><b>Вийшов патч, і моди зламалися: що робити</b><span>Вийшов патч, і гра вилітає або моди не працюють? Покрокова інструкція: що перевірити, які моди прибрати першими і як усе повернути без втрат.</span></a><a class="card" href="/uk/guides/find-broken-mod-50-50/"><b>Як знайти зламаний мод методом 50/50</b><span>Гра вилітає, а який мод винен — незрозуміло? Метод 50/50 знаходить зламаний мод навіть серед тисяч файлів за 10–12 запусків. Покроково й з прикладами.</span></a><a class="card" href="/uk/guides/mods-not-showing/"><b>Моди не видно в грі: 8 причин і що з ними робити</b><span>Встановила моди, а в грі їх немає? Розбираємо 8 частих причин: вимкнені налаштування, не та папка, OneDrive, надто глибокі папки, архіви, потрібні доповнення.</span></a><a class="card" href="/uk/guides/lastexception/"><b>Файли LastException: що це і як знайти за ними зламаний мод</b><span>У папці The Sims 4 з’явилися файли lastException.txt? Пояснюємо, що це, як прочитати їх без програмування і як за ними знайти зламаний мод.</span></a></div></div>
+<div class="langs">Ця стаття іншими мовами: <a href="/guides/slow-loading/" hreflang="ru">Русский</a> · <a href="/en/guides/slow-loading/" hreflang="en">English</a> · <a href="/pt/guides/slow-loading/" hreflang="pt-BR">Português</a> · <a href="/es/guides/slow-loading/" hreflang="es">Español</a> · <a href="/de/guides/slow-loading/" hreflang="de">Deutsch</a> · <a href="/fr/guides/slow-loading/" hreflang="fr">Français</a> · <a href="/pl/guides/slow-loading/" hreflang="pl">Polski</a> · <a href="/it/guides/slow-loading/" hreflang="it">Italiano</a></div>
+</main>
+<footer><div class="wrap">
+  © Sims 4 Mod Doctor · <a href="/uk/">Головна</a> · <a href="/uk/guides/">Інструкції</a> · <a href="https://github.com/leva000111/Sims4ModDoctor-App">Програма на GitHub</a> · <a href="https://t.me/sims4moddoctor">Канал</a> · <a href="https://t.me/sims4moddoctor_chat">Спільнота</a><br>
+  Sims 4 Mod Doctor — незалежна програма, не пов’язана з Electronic Arts. The Sims — торгова марка Electronic Arts Inc.
+</div></footer>
+</body>
+</html>

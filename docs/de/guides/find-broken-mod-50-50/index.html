@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Die Sims 4: Kaputten Mod finden mit der 50/50-Methode | Sims 4 Mod Doctor</title>
+<meta name="description" content="Spiel stürzt ab, doch welcher Mod ist schuld? Die 50/50-Methode findet ihn auch unter Tausenden Dateien in 10–12 Starts. Schritt für Schritt mit Beispielen.">
+<meta property="og:title" content="Die Sims 4: Kaputten Mod finden mit der 50/50-Methode">
+<meta property="og:description" content="Spiel stürzt ab, doch welcher Mod ist schuld? Die 50/50-Methode findet ihn auch unter Tausenden Dateien in 10–12 Starts. Schritt für Schritt mit Beispielen.">
+<meta property="og:image" content="https://sims4moddoctor.com/img/de/home.webp">
+<meta property="og:url" content="https://sims4moddoctor.com/de/guides/find-broken-mod-50-50/">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://sims4moddoctor.com/de/guides/find-broken-mod-50-50/">
+<link rel="icon" href="/img/favicon.png">
+<link rel="alternate" hreflang="ru" href="https://sims4moddoctor.com/guides/find-broken-mod-50-50/">
+<link rel="alternate" hreflang="en" href="https://sims4moddoctor.com/en/guides/find-broken-mod-50-50/">
+<link rel="alternate" hreflang="pt-BR" href="https://sims4moddoctor.com/pt/guides/find-broken-mod-50-50/">
+<link rel="alternate" hreflang="es" href="https://sims4moddoctor.com/es/guides/find-broken-mod-50-50/">
+<link rel="alternate" hreflang="de" href="https://sims4moddoctor.com/de/guides/find-broken-mod-50-50/">
+<link rel="alternate" hreflang="fr" href="https://sims4moddoctor.com/fr/guides/find-broken-mod-50-50/">
+<link rel="alternate" hreflang="pl" href="https://sims4moddoctor.com/pl/guides/find-broken-mod-50-50/">
+<link rel="alternate" hreflang="it" href="https://sims4moddoctor.com/it/guides/find-broken-mod-50-50/">
+<link rel="alternate" hreflang="uk" href="https://sims4moddoctor.com/uk/guides/find-broken-mod-50-50/">
+<link rel="alternate" hreflang="x-default" href="https://sims4moddoctor.com/en/guides/find-broken-mod-50-50/">
+<script>if(/\.pages\.dev$/.test(location.hostname))location.replace("https://sims4moddoctor.com"+location.pathname+location.search+location.hash)</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf8ff;--bg2:#f3edff;--card:#fff;--ink:#2a2344;--ink2:#5e577c;--line:#ebe4fb;--pink:#ff6fae;--pink2:#ffd2e7;--violet:#8b6cff;--violet2:#e7e0ff;--mint:#3fcf9d;--mint2:#d4f6e9;--sun:#ffc547;--sh:0 10px 30px rgba(110,80,200,.12);--r:22px}
+@media (prefers-color-scheme:dark){:root{--bg:#15121f;--bg2:#1d1830;--card:#221c35;--ink:#f1ecff;--ink2:#b5acd6;--line:#342c4f;--pink2:#4a2440;--violet2:#2f2656;--mint2:#183a30;--sh:0 10px 30px rgba(0,0,0,.35)}}
+*{box-sizing:border-box}
+body{margin:0;font-family:Nunito,system-ui,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:18px}
+a{color:var(--violet)}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+header.top .wrap{max-width:1160px;display:flex;align-items:center;gap:14px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:18px;text-decoration:none;color:var(--ink)}
+.logo img{width:38px;height:38px;border-radius:50%;box-shadow:0 3px 10px rgba(139,108,255,.35)}
+header.top nav{margin-left:auto;display:flex;gap:18px;align-items:center;font-weight:700}
+header.top nav a.lnk{text-decoration:none;color:var(--ink2)}header.top nav a.lnk:hover{color:var(--violet)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:800;text-decoration:none;border:0;font-size:16px;background:linear-gradient(135deg,var(--pink),var(--violet));color:#fff;box-shadow:0 10px 24px rgba(255,111,174,.35)}
+.btn.sm{padding:9px 16px;font-size:14px}
+@media (max-width:640px){header.top nav a.lnk{display:none}}
+.crumbs{font-size:14px;color:var(--ink2);margin:26px 0 0}.crumbs a{color:var(--ink2)}
+h1{font-size:clamp(30px,4.6vw,44px);line-height:1.12;margin:14px 0 12px;font-weight:900;letter-spacing:-.3px}
+.lead{font-size:20px;color:var(--ink2);margin:0 0 8px}
+.meta{font-size:14px;color:var(--ink2);margin-bottom:26px}
+article h2{font-size:27px;line-height:1.2;margin:38px 0 10px;font-weight:900}
+article h3{font-size:21px;margin:26px 0 8px}
+article p,article li{color:var(--ink)}
+article li{margin:6px 0}
+article code{background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:1px 7px;font-size:.88em;word-break:break-word}
+article .tip,article .warn{border-radius:18px;padding:14px 18px;margin:18px 0;border:1px solid var(--line)}
+article .tip{background:var(--mint2)}article .warn{background:var(--pink2)}
+article .tip p,article .warn p{margin:0}
+article table{width:100%;border-collapse:collapse;margin:16px 0;font-size:16px}
+article th,article td{border:1px solid var(--line);padding:8px 10px;text-align:left;overflow-wrap:anywhere}article th{background:var(--bg2)}
+.cta{background:linear-gradient(135deg,var(--violet2),var(--pink2));border-radius:28px;padding:28px;margin:44px 0 10px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+.cta img{width:96px;height:96px;border-radius:50%;border:4px solid #fff;box-shadow:var(--sh)}
+.cta h2{margin:0 0 6px;font-size:24px}.cta p{margin:0 0 14px;color:var(--ink2)}.cta .note{font-size:13px;margin:10px 0 0}
+@media (max-width:600px){.cta{grid-template-columns:1fr;text-align:center}.cta img{margin:0 auto}}
+.related{margin:34px 0}.related h2{font-size:22px}
+.cards{display:grid;gap:14px}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:var(--sh);text-decoration:none;color:var(--ink)}
+.card b{display:block;font-size:19px;margin-bottom:4px}.card span{color:var(--ink2);font-size:15.5px}
+.card:hover b{color:var(--violet)}
+.langs{font-size:15px;color:var(--ink2);margin:26px 0}
+footer{padding:40px 0 60px;color:var(--ink2);font-size:14px;text-align:center}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Kaputten Mod finden mit der 50/50-Methode","description":"Spiel stürzt ab, doch welcher Mod ist schuld? Die 50/50-Methode findet ihn auch unter Tausenden Dateien in 10–12 Starts. Schritt für Schritt mit Beispielen.","inLanguage":"de","datePublished":"2026-11-25","dateModified":"2026-11-25","image":"https://sims4moddoctor.com/img/de/home.webp","mainEntityOfPage":"https://sims4moddoctor.com/de/guides/find-broken-mod-50-50/","author":{"@type":"Organization","name":"Sims 4 Mod Doctor","url":"https://sims4moddoctor.com/"},"publisher":{"@type":"Organization","name":"Sims 4 Mod Doctor","url":"https://sims4moddoctor.com/","logo":{"@type":"ImageObject","url":"https://sims4moddoctor.com/img/favicon.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https://sims4moddoctor.com/de/"},{"@type":"ListItem","position":2,"name":"Anleitungen","item":"https://sims4moddoctor.com/de/guides/"},{"@type":"ListItem","position":3,"name":"Kaputten Mod finden mit der 50/50-Methode"}]}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="/de/"><img src="/img/avatar_channel.webp" alt="">Sims 4 Mod Doctor</a>
+  <nav><a class="lnk" href="/de/guides/">Alle Anleitungen</a><a class="btn sm" href="https://github.com/leva000111/Sims4ModDoctor-App/releases/latest/download/Sims4ModDoctor.exe" download>⬇ Herunterladen</a></nav>
+</div></header>
+<main class="wrap">
+<div class="crumbs"><a href="/de/">Startseite</a> › <a href="/de/guides/">Anleitungen</a> › Kaputten Mod finden mit der 50/50-Methode</div>
+<article>
+<h1>Kaputten Mod finden mit der 50/50-Methode</h1>
+<p class="lead">Wenn das Spiel abstürzt, endlos lädt oder sich seltsam verhält und die Dateinamen den Übeltäter nicht verraten, hilft ein alter, zuverlässiger Trick: Teil die Mods so lange in zwei Hälften, bis nur noch einer übrig ist.</p>
+<div class="meta">Aktualisiert am: 25. November 2026</div>
+<h2>Wann du diese Methode brauchst</h2>
+<ul>
+<li>das Spiel stürzt beim Laden oder in einem bestimmten Moment ab;</li>
+<li>der Ladebildschirm hört nicht mehr auf;</li>
+<li>seltsame Dinge passieren: Sims stehen wie eingefroren herum, Buttons verschwinden, ein Menü geht nicht auf;</li>
+<li>du hast die Skript-Mods schon rausgenommen und alles aktualisiert, was ging – und das Problem ist immer noch da.</li>
+</ul>
+
+<h2>Warum das so schnell geht</h2>
+<p>Jede Runde schließt die Hälfte der Verdächtigen aus. Deshalb wächst die Zahl der Starts nur sehr langsam:</p>
+<table>
+<tr><th>Dateien in Mods</th><th>Spielstarts bis zum Übeltäter</th></tr>
+<tr><td>100</td><td>etwa 7</td></tr>
+<tr><td>1.000</td><td>etwa 10</td></tr>
+<tr><td>5.000</td><td>etwa 13</td></tr>
+</table>
+
+<h2>Vorbereitung</h2>
+<ol>
+<li><b>Mach eine Sicherung</b> der Ordner <code>Mods</code> und <code>Saves</code> aus <code>Dokumente\Electronic Arts\Die Sims 4</code>.</li>
+<li><b>Schreib auf, wie sich das Problem auslösen lässt</b>: „stürzt beim Laden von Familie Müller ab“, „das Handy geht nicht auf“. Teste jedes Mal auf die gleiche Weise.</li>
+<li>Leg auf dem Desktop zwei Ordner an: <b>„Beiseitegelegt“</b> und <b>„Geprüft“</b>.</li>
+</ol>
+<div class="warn"><p>Während der Suche <b>speicherst du das Spiel nicht</b>. Lade den Haushalt, teste und beende ohne Speichern – sonst „verschwindet“ die Hälfte der Mods aus dem Spielstand.</p></div>
+
+<h2>Schritt für Schritt</h2>
+<ol>
+<li>Verschiebe die <b>Hälfte</b> des Inhalts von <code>Mods</code> in den Ordner „Beiseitegelegt“. Verschiebe Mods immer komplett: den Ordner eines Mods oder das Paar „<code>.package</code> + <code>.ts4script</code>“ eines Erstellers – reiß sie nicht auseinander.</li>
+<li>Starte das Spiel und prüf das Problem.</li>
+<li><b>Problem noch da?</b> Dann steckt der Übeltäter unter den Mods, die in Mods geblieben sind. Die beiseitegelegten sind „sauber“ – verschiebe sie nach „Geprüft“.</li>
+<li><b>Problem weg?</b> Dann steckt der Übeltäter unter den beiseitegelegten. Verschiebe die Mods aus Mods nach „Geprüft“ und hol die beiseitegelegten zurück nach Mods.</li>
+<li>Wiederhole das mit den restlichen Verdächtigen: wieder halbieren, wieder testen.</li>
+<li>Ist nur noch ein Verdächtiger übrig, hast du den Übeltäter gefunden. Hol alles aus „Geprüft“ zurück nach Mods.</li>
+</ol>
+<div class="tip"><p>Manchmal entsteht das Problem durch <b>zwei Mods zusammen</b> – ein Konflikt. Dann verschwindet es, egal welche Hälfte du rausnimmst. Lass in diesem Fall die erste Hälfte komplett drin und halbiere nur die zweite: Solange das Problem da ist, ist der zweite Beteiligte des Konflikts noch im Spiel. Hast du ihn gefunden, lass ihn drin und such genauso den ersten in der anderen Hälfte.</p></div>
+
+<h2>Was du mit dem gefundenen Mod machst</h2>
+<ul>
+<li>Schau auf die Seite des Erstellers: Vielleicht gibt es schon ein Update für die aktuelle Spielversion.</li>
+<li>Kein Update? Leg den Mod beiseite und warte. Ersteller reparieren Mods oft in den ersten Tagen nach einem Patch.</li>
+<li>Wird der Mod nicht mehr gepflegt, such einen ähnlichen von einem anderen Ersteller.</li>
+<li>Erzähl dem Ersteller von dem Fehler: So wird der Mod für alle schneller repariert.</li>
+</ul>
+
+<h2>Wie du dir die Handarbeit sparst</h2>
+<p>In <b>Sims 4 Mod Doctor</b> ist die 50/50-Suche eingebaut:</p>
+<ul>
+<li><b>kostenlos</b>: Das Programm versteckt die Hälfte der Verdächtigen von selbst in der Quarantäne – du startest nur das Spiel und sagst, ob es besser geworden ist. Mods werden komplett verschoben, nichts geht verloren;</li>
+<li>in der <b>PRO-Version</b> macht die Auto-Suche dasselbe ohne dich: Sie startet das Spiel selbst, wartet aufs Laden, liest die Fehler und macht weiter.</li>
+</ul>
+<p>Vor der Suche lohnt sich die normale kostenlose Mod-Prüfung – oft findet sie die kaputte oder veraltete Datei sofort. Gehen deine Mods nicht kaputt, sondern tauchen gar nicht erst im Spiel auf? Dann schau in die Anleitung <a href="../mods-not-showing/">„Mods werden im Spiel nicht angezeigt“</a>.</p>
+</article>
+<div class="cta"><img src="/img/avatar_channel.webp" alt=""><div>
+  <h2>Lass Doktor Moddi für dich nachsehen</h2><p>Sims 4 Mod Doctor prüft deinen Mods-Ordner kostenlos, findet kaputte, veraltete und doppelte Dateien und verschiebt sie in die Quarantäne. Alles Entfernte holst du mit einem Klick zurück.</p>
+  <a class="btn" href="https://github.com/leva000111/Sims4ModDoctor-App/releases/latest/download/Sims4ModDoctor.exe" download>⬇ Kostenlos herunterladen</a>
+  <p class="note">Windows 10/11 · eine einzige Datei, ohne Installation · Mod-Prüfung für immer kostenlos</p>
+</div></div>
+
+<div class="related"><h2>Weitere Anleitungen</h2><div class="cards"><a class="card" href="/de/guides/mods-broken-after-patch/"><b>Ein Patch ist da und die Mods sind kaputt: was tun</b><span>Neuer Patch, und das Spiel stürzt ab oder Mods gehen nicht? Schritt für Schritt: was du prüfst, welche Mods zuerst raus müssen und wie alles heil zurückkommt.</span></a><a class="card" href="/de/guides/mods-not-showing/"><b>Mods werden im Spiel nicht angezeigt: 8 Ursachen und was hilft</b><span>Mods installiert, aber im Spiel fehlen sie? 8 häufige Ursachen: Einstellungen aus, falscher Ordner, OneDrive, zu tiefe Ordner, Archive, fehlende Packs.</span></a><a class="card" href="/de/guides/slow-loading/"><b>Das Spiel lädt mit Mods ewig: so wird es schneller</b><span>Sims 4 lädt 10–15 Minuten? Was das Laden mit Mods bremst: Tausende kleine CC-Dateien, schwere Skripte, Cache, eine langsame Festplatte – und was hilft.</span></a><a class="card" href="/de/guides/lastexception/"><b>LastException-Dateien: was sie sind und wie du damit einen kaputten Mod findest</b><span>Im Ordner Die Sims 4 sind lastException.txt-Dateien aufgetaucht? Was sie bedeuten, wie du sie ohne Programmierkenntnisse liest und den kaputten Mod findest.</span></a></div></div>
+<div class="langs">Diese Anleitung in anderen Sprachen: <a href="/guides/find-broken-mod-50-50/" hreflang="ru">Русский</a> · <a href="/en/guides/find-broken-mod-50-50/" hreflang="en">English</a> · <a href="/pt/guides/find-broken-mod-50-50/" hreflang="pt-BR">Português</a> · <a href="/es/guides/find-broken-mod-50-50/" hreflang="es">Español</a> · <a href="/fr/guides/find-broken-mod-50-50/" hreflang="fr">Français</a> · <a href="/pl/guides/find-broken-mod-50-50/" hreflang="pl">Polski</a> · <a href="/it/guides/find-broken-mod-50-50/" hreflang="it">Italiano</a> · <a href="/uk/guides/find-broken-mod-50-50/" hreflang="uk">Українська</a></div>
+</main>
+<footer><div class="wrap">
+  © Sims 4 Mod Doctor · <a href="/de/">Startseite</a> · <a href="/de/guides/">Anleitungen</a> · <a href="https://github.com/leva000111/Sims4ModDoctor-App">Programm auf GitHub</a> · <a href="https://t.me/sims4moddoctor">Kanal</a> · <a href="https://t.me/sims4moddoctor_chat">Community</a><br>
+  Sims 4 Mod Doctor ist ein unabhängiges Programm und steht in keiner Verbindung zu Electronic Arts. Die Sims ist eine Marke von Electronic Arts Inc.
+</div></footer>
+</body>
+</html>
