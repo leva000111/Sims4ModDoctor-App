@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sims 4 Mod Doctor — Доктор Модді лікує твої моди</title>
-<meta name="description" content="Програма для The Sims 4: перевірка модів, пошук зламаного мода, «День патча», переклади, лад у CC і збереженнях. Перевірка модів — безкоштовно назавжди.">
+<title>Перевірка модів Sims 4: знайти зламаний мод безкоштовно | Sims 4 Mod Doctor</title>
+<meta name="description" content="Гра вилітає чи моди зламалися після патча? Безкоштовна програма для Windows перевірить папку Mods, знайде зламаний мод методом 50/50 і прибере його в карантин.">
 <meta property="og:title" content="Sims 4 Mod Doctor — Доктор Модді лікує твої моди">
 <meta property="og:description" content="Перевірка модів The Sims 4 за кілька хвилин, пошук зламаного мода, допомога після патчів. Безкоштовно для Windows.">
 <meta property="og:image" content="https://sims4moddoctor.com/img/uk/home.webp">
@@ -23,12 +23,19 @@
 <link rel="alternate" hreflang="it" href="https://sims4moddoctor.com/it/">
 <link rel="alternate" hreflang="uk" href="https://sims4moddoctor.com/uk/">
 <link rel="alternate" hreflang="x-default" href="https://sims4moddoctor.com/en/">
-<script>/* язык сайта: с главной — на версию под язык браузера (один раз; выбор в меню запоминается) */
-(function(){var L=["ru","en","pt","es","de","fr","pl","it","uk"],RU=["ru","be","kk","ky","tg","hy","az","uz"],cur=document.documentElement.lang,s=null;
+<script>/* язык сайта: без автопереадресации (поисковики её не любят). Выбор из меню запоминается и с главной переносит сразу; иначе — плашка «есть версия на вашем языке» */
+(function(){var L=["ru","en","pt","es","de","fr","pl","it","uk"],RU=["ru","be","kk","ky","tg","hy","az","uz"],cur=document.documentElement.lang.split("-")[0],s=null;
+function u(v){return v==="ru"?"/":"/"+v+"/"}
+function keep(v){try{localStorage.setItem("md_site_lang",v)}catch(e){}}
 try{s=localStorage.getItem("md_site_lang")}catch(e){}
-if(location.pathname!=="/"&&location.pathname!=="/index.html")return;
-var w=s;if(!w){var b=String(navigator.language||"").toLowerCase().split("-")[0];w=RU.indexOf(b)>=0?"ru":L.indexOf(b)>=0?b:"en"}
-if(w!==cur&&L.indexOf(w)>=0)location.replace(w==="ru"?"/":"/"+w+"/")})();
+if(s){if(s!==cur&&L.indexOf(s)>=0&&(location.pathname==="/"||location.pathname==="/index.html"))location.replace(u(s));return}
+var b=String(navigator.language||"").toLowerCase().split("-")[0],w=RU.indexOf(b)>=0?"ru":L.indexOf(b)>=0?b:"";
+if(!w||w===cur)return;
+var T={ru:["Есть версия сайта на русском","Открыть"],en:["This site is available in English","Open"],pt:["Este site está disponível em português","Abrir"],es:["Este sitio está disponible en español","Abrir"],de:["Diese Seite gibt es auch auf Deutsch","Öffnen"],fr:["Ce site existe aussi en français","Ouvrir"],pl:["Ta strona jest dostępna po polsku","Otwórz"],it:["Questo sito è disponibile in italiano","Apri"],uk:["Є версія сайту українською","Відкрити"]};
+document.addEventListener("DOMContentLoaded",function(){var d=document.createElement("div");d.className="langbar";d.lang=w;d.translate=false;
+d.innerHTML="<span></span><a></a><button type=\"button\" aria-label=\"×\">×</button>";
+d.children[0].textContent=T[w][0];var a=d.children[1];a.textContent=T[w][1];a.href=u(w);a.onclick=function(){keep(w)};
+d.children[2].onclick=function(){keep(cur);d.remove()};document.body.insertBefore(d,document.body.firstChild)})})();
 function mdSiteLang(v){try{localStorage.setItem("md_site_lang",v)}catch(e){}location.href=v==="ru"?"/":"/"+v+"/"}</script>
 <script>if(/\.pages\.dev$/.test(location.hostname))location.replace("https://sims4moddoctor.com"+location.pathname+location.search+location.hash)</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -167,7 +174,12 @@ footer a{color:var(--violet)}
 /* просмотр скриншота */
 .lb{position:fixed;inset:0;background:rgba(20,14,40,.82);display:none;align-items:center;justify-content:center;z-index:100;padding:24px;cursor:zoom-out}
 .lb.on{display:flex}.lb img{max-height:92vh;border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+/* плашка «есть версия на вашем языке» */
+.langbar{display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;padding:8px 44px 8px 16px;position:relative;background:linear-gradient(135deg,var(--pink),var(--violet));color:#fff;font-weight:800;font-size:15px}
+.langbar a{background:#fff;color:var(--violet);padding:4px 14px;border-radius:999px;text-decoration:none}
+.langbar button{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:0;color:#fff;font-size:24px;line-height:1;cursor:pointer;padding:4px 8px}
 </style>
+<script type="application/ld+json" data-seo="ld">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://sims4moddoctor.com/#site","name":"Sims 4 Mod Doctor","url":"https://sims4moddoctor.com/","inLanguage":"uk"},{"@type":"SoftwareApplication","name":"Sims 4 Mod Doctor","url":"https://sims4moddoctor.com/uk/","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Game utility","operatingSystem":"Windows 10, Windows 11","downloadUrl":"https://github.com/leva000111/Sims4ModDoctor-App/releases/latest/download/Sims4ModDoctor.exe","image":"https://sims4moddoctor.com/img/uk/home.webp","description":"Гра вилітає чи моди зламалися після патча? Безкоштовна програма для Windows перевірить папку Mods, знайде зламаний мод методом 50/50 і прибере його в карантин.","inLanguage":"uk","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"FAQPage","url":"https://sims4moddoctor.com/uk/","inLanguage":"uk","mainEntity":[{"@type":"Question","name":"Це безпечно? Програма нічого не видалить?","acceptedAnswer":{"@type":"Answer","text":"Нічого не видаляється назавжди. Усе прибране йде в карантин і повертається однією кнопкою. Перед змінами програма може зробити копію теки Mods і збережень. Збереження вона лише читає."}},{"@type":"Question","name":"Windows лає на програму — що робити?","acceptedAnswer":{"@type":"Answer","text":"Програма поки без цифрового підпису, тому Windows може показати «Windows захистила ваш комп’ютер». Натисни «Докладніше» → «Все одно виконати». Завантажуй лише з цієї сторінки або з нашого каналу."}},{"@type":"Question","name":"Чи потрібна гра на цьому комп’ютері?","acceptedAnswer":{"@type":"Answer","text":"Так, програма працює з текою The Sims 4 на твоєму комп’ютері: Mods, збереження, бібліотека. Підійде будь-яка версія гри з EA app або Steam."}},{"@type":"Question","name":"Як купити PRO-версію без крипти?","acceptedAnswer":{"@type":"Answer","text":"Натисни «💎 PRO-версія» у програмі й обери тариф — відкриється рахунок у @CryptoBot. Там-таки, у розділі P2P, можна купити USDT карткою за рублі, гривні чи теньге й оплатити рахунок. Ключ активації приходить у програму сам."}},{"@type":"Question","name":"Новий комп’ютер — PRO-версія перенесеться?","acceptedAnswer":{"@type":"Answer","text":"PRO працює на одному комп’ютері. На старому натисни «💎 PRO-версія» → «Перенести на інший комп’ютер», а на новому введи свій ключ. Старого комп’ютера вже нема — напиши в спільноту, перенесемо вручну."}},{"@type":"Question","name":"Як оновлювати програму?","acceptedAnswer":{"@type":"Answer","text":"Ніяк — вона оновлюється сама під час запуску."}}]}]}</script>
 </head>
 <body>
 

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sims 4 Mod Doctor — Docteur Moddi soigne tes mods</title>
-<meta name="description" content="Le logiciel pour The Sims 4 : vérification des mods, recherche du mod cassé, « Jour de patch », traductions, du rangement dans ton CC et tes sauvegardes. La vérification des mods est gratuite pour toujours.">
+<title>Vérifier ses mods Sims 4 : trouver le mod cassé gratuitement | Sims 4 Mod Doctor</title>
+<meta name="description" content="Le jeu plante ou vos mods ne marchent plus après un patch ? Appli Windows gratuite qui analyse le dossier Mods des Sims 4, trouve le mod cassé (méthode 50/50) et l&#x27;isole.">
 <meta property="og:title" content="Sims 4 Mod Doctor — Docteur Moddi soigne tes mods">
 <meta property="og:description" content="Vérifie tes mods des Sims 4 en quelques minutes, trouve le mod cassé, remets le jeu d'aplomb après un patch. Gratuit pour Windows.">
 <meta property="og:image" content="https://sims4moddoctor.com/img/fr/home.webp">
@@ -23,12 +23,19 @@
 <link rel="alternate" hreflang="it" href="https://sims4moddoctor.com/it/">
 <link rel="alternate" hreflang="uk" href="https://sims4moddoctor.com/uk/">
 <link rel="alternate" hreflang="x-default" href="https://sims4moddoctor.com/en/">
-<script>/* язык сайта: с главной — на версию под язык браузера (один раз; выбор в меню запоминается) */
-(function(){var L=["ru","en","pt","es","de","fr","pl","it","uk"],RU=["ru","be","kk","ky","tg","hy","az","uz"],cur=document.documentElement.lang,s=null;
+<script>/* язык сайта: без автопереадресации (поисковики её не любят). Выбор из меню запоминается и с главной переносит сразу; иначе — плашка «есть версия на вашем языке» */
+(function(){var L=["ru","en","pt","es","de","fr","pl","it","uk"],RU=["ru","be","kk","ky","tg","hy","az","uz"],cur=document.documentElement.lang.split("-")[0],s=null;
+function u(v){return v==="ru"?"/":"/"+v+"/"}
+function keep(v){try{localStorage.setItem("md_site_lang",v)}catch(e){}}
 try{s=localStorage.getItem("md_site_lang")}catch(e){}
-if(location.pathname!=="/"&&location.pathname!=="/index.html")return;
-var w=s;if(!w){var b=String(navigator.language||"").toLowerCase().split("-")[0];w=RU.indexOf(b)>=0?"ru":L.indexOf(b)>=0?b:"en"}
-if(w!==cur&&L.indexOf(w)>=0)location.replace(w==="ru"?"/":"/"+w+"/")})();
+if(s){if(s!==cur&&L.indexOf(s)>=0&&(location.pathname==="/"||location.pathname==="/index.html"))location.replace(u(s));return}
+var b=String(navigator.language||"").toLowerCase().split("-")[0],w=RU.indexOf(b)>=0?"ru":L.indexOf(b)>=0?b:"";
+if(!w||w===cur)return;
+var T={ru:["Есть версия сайта на русском","Открыть"],en:["This site is available in English","Open"],pt:["Este site está disponível em português","Abrir"],es:["Este sitio está disponible en español","Abrir"],de:["Diese Seite gibt es auch auf Deutsch","Öffnen"],fr:["Ce site existe aussi en français","Ouvrir"],pl:["Ta strona jest dostępna po polsku","Otwórz"],it:["Questo sito è disponibile in italiano","Apri"],uk:["Є версія сайту українською","Відкрити"]};
+document.addEventListener("DOMContentLoaded",function(){var d=document.createElement("div");d.className="langbar";d.lang=w;d.translate=false;
+d.innerHTML="<span></span><a></a><button type=\"button\" aria-label=\"×\">×</button>";
+d.children[0].textContent=T[w][0];var a=d.children[1];a.textContent=T[w][1];a.href=u(w);a.onclick=function(){keep(w)};
+d.children[2].onclick=function(){keep(cur);d.remove()};document.body.insertBefore(d,document.body.firstChild)})})();
 function mdSiteLang(v){try{localStorage.setItem("md_site_lang",v)}catch(e){}location.href=v==="ru"?"/":"/"+v+"/"}</script>
 <script>if(/\.pages\.dev$/.test(location.hostname))location.replace("https://sims4moddoctor.com"+location.pathname+location.search+location.hash)</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -167,7 +174,12 @@ footer a{color:var(--violet)}
 /* просмотр скриншота */
 .lb{position:fixed;inset:0;background:rgba(20,14,40,.82);display:none;align-items:center;justify-content:center;z-index:100;padding:24px;cursor:zoom-out}
 .lb.on{display:flex}.lb img{max-height:92vh;border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+/* плашка «есть версия на вашем языке» */
+.langbar{display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;padding:8px 44px 8px 16px;position:relative;background:linear-gradient(135deg,var(--pink),var(--violet));color:#fff;font-weight:800;font-size:15px}
+.langbar a{background:#fff;color:var(--violet);padding:4px 14px;border-radius:999px;text-decoration:none}
+.langbar button{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:0;color:#fff;font-size:24px;line-height:1;cursor:pointer;padding:4px 8px}
 </style>
+<script type="application/ld+json" data-seo="ld">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://sims4moddoctor.com/#site","name":"Sims 4 Mod Doctor","url":"https://sims4moddoctor.com/","inLanguage":"fr"},{"@type":"SoftwareApplication","name":"Sims 4 Mod Doctor","url":"https://sims4moddoctor.com/fr/","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Game utility","operatingSystem":"Windows 10, Windows 11","downloadUrl":"https://github.com/leva000111/Sims4ModDoctor-App/releases/latest/download/Sims4ModDoctor.exe","image":"https://sims4moddoctor.com/img/fr/home.webp","description":"Le jeu plante ou vos mods ne marchent plus après un patch ? Appli Windows gratuite qui analyse le dossier Mods des Sims 4, trouve le mod cassé (méthode 50/50) et l'isole.","inLanguage":"fr","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"FAQPage","url":"https://sims4moddoctor.com/fr/","inLanguage":"fr","mainEntity":[{"@type":"Question","name":"Est-ce sans danger ? Le logiciel ne va rien supprimer ?","acceptedAnswer":{"@type":"Answer","text":"Rien n'est supprimé pour de bon. Tout ce qui est retiré part en quarantaine et revient en un clic. Avant de modifier quoi que ce soit, le logiciel peut faire une copie de ton dossier Mods et de tes sauvegardes. Tes sauvegardes, il ne fait que les lire."}},{"@type":"Question","name":"Windows se méfie du logiciel, que faire ?","acceptedAnswer":{"@type":"Answer","text":"Le logiciel n'a pas encore de signature numérique, donc Windows peut afficher « Windows a protégé votre ordinateur ». Clique sur « Informations complémentaires » → « Exécuter quand même ». Ne télécharge que depuis cette page ou depuis notre chaîne."}},{"@type":"Question","name":"Faut-il que le jeu soit installé sur cet ordinateur ?","acceptedAnswer":{"@type":"Answer","text":"Oui, le logiciel travaille avec le dossier The Sims 4 de ton ordinateur : Mods, sauvegardes, bibliothèque. Toutes les versions du jeu, via l'EA app ou Steam, sont compatibles."}},{"@type":"Question","name":"Comment acheter la version PRO sans crypto ?","acceptedAnswer":{"@type":"Answer","text":"Clique sur « 💎 Version PRO » dans le logiciel et choisis une formule : une facture s'ouvre dans @CryptoBot. Au même endroit, dans la section P2P, tu peux acheter des USDT par carte avec des roubles, des hryvnias ou des tengés, puis régler la facture. La clé d'activation arrive toute seule dans le logiciel."}},{"@type":"Question","name":"Nouvel ordinateur : la version PRO suit-elle ?","acceptedAnswer":{"@type":"Answer","text":"PRO fonctionne sur un seul ordinateur. Sur l'ancien, clique sur « 💎 Version PRO » → « Transférer vers un autre ordinateur », puis saisis ta clé sur le nouveau. Tu n'as plus l'ancien ? Écris-nous dans la communauté, on fera le transfert à la main."}},{"@type":"Question","name":"Comment mettre le logiciel à jour ?","acceptedAnswer":{"@type":"Answer","text":"Tu n'as rien à faire : il se met à jour tout seul au lancement."}}]}]}</script>
 </head>
 <body>
 
