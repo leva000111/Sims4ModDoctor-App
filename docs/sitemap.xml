@@ -126,4 +126,60 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://sims4moddoctor.com/uk/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sims4moddoctor.com/en/"/>
   </url>
+  <url>
+    <loc>https://sims4moddoctor.com/guides/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sims4moddoctor.com/guides/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sims4moddoctor.com/en/guides/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sims4moddoctor.com/en/guides/"/>
+  </url>
+  <url>
+    <loc>https://sims4moddoctor.com/en/guides/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sims4moddoctor.com/guides/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sims4moddoctor.com/en/guides/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sims4moddoctor.com/en/guides/"/>
+  </url>
+  <url>
+    <loc>https://sims4moddoctor.com/guides/mods-broken-after-patch/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sims4moddoctor.com/guides/mods-broken-after-patch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sims4moddoctor.com/en/guides/mods-broken-after-patch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sims4moddoctor.com/en/guides/mods-broken-after-patch/"/>
+  </url>
+  <url>
+    <loc>https://sims4moddoctor.com/en/guides/mods-broken-after-patch/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sims4moddoctor.com/guides/mods-broken-after-patch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sims4moddoctor.com/en/guides/mods-broken-after-patch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sims4moddoctor.com/en/guides/mods-broken-after-patch/"/>
+  </url>
+  <url>
+    <loc>https://sims4moddoctor.com/guides/find-broken-mod-50-50/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sims4moddoctor.com/guides/find-broken-mod-50-50/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sims4moddoctor.com/en/guides/find-broken-mod-50-50/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sims4moddoctor.com/en/guides/find-broken-mod-50-50/"/>
+  </url>
+  <url>
+    <loc>https://sims4moddoctor.com/en/guides/find-broken-mod-50-50/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sims4moddoctor.com/guides/find-broken-mod-50-50/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sims4moddoctor.com/en/guides/find-broken-mod-50-50/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sims4moddoctor.com/en/guides/find-broken-mod-50-50/"/>
+  </url>
+  <url>
+    <loc>https://sims4moddoctor.com/guides/mods-not-showing/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sims4moddoctor.com/guides/mods-not-showing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sims4moddoctor.com/en/guides/mods-not-showing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sims4moddoctor.com/en/guides/mods-not-showing/"/>
+  </url>
+  <url>
+    <loc>https://sims4moddoctor.com/en/guides/mods-not-showing/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sims4moddoctor.com/guides/mods-not-showing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sims4moddoctor.com/en/guides/mods-not-showing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sims4moddoctor.com/en/guides/mods-not-showing/"/>
+  </url>
 </urlset>
