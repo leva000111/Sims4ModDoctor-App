@@ -29,6 +29,7 @@ h1{font-size:30px;line-height:1.2;margin:6px 0 8px;font-weight:900}.lead{color:v
 .key{font-family:ui-monospace,Consolas,monospace;font-size:22px;font-weight:800;letter-spacing:1px;background:var(--bg2);padding:12px;border-radius:12px;user-select:all;word-break:break-all;margin:10px 0}
 .mut{color:var(--ink2);font-size:15px}.err{color:#d64545}.ok{color:var(--mint)}.hide{display:none}
 ol{padding-left:22px}li{margin:4px 0}
+.refbox{background:var(--mint2);color:var(--ink);border-radius:14px;padding:12px 16px;margin:0 0 16px;font-weight:800}
 .spin{display:inline-block;width:16px;height:16px;border:3px solid var(--violet2);border-top-color:var(--violet);border-radius:50%;animation:s 1s linear infinite;vertical-align:-3px;margin-right:6px}@keyframes s{to{transform:rotate(360deg)}}
 </style>
 </head>
@@ -38,6 +39,7 @@ ol{padding-left:22px}li{margin:4px 0}
 
 <h1 id="t_h1"></h1>
 <p class="lead" id="t_lead"></p>
+<div class="refbox hide" id="refbox"></div>
 <div class="plans" id="plans"></div>
 <p class="mut" id="t_pay"></p>
 
@@ -59,7 +61,7 @@ ol{padding-left:22px}li{margin:4px 0}
 const API = "https://moddoctor-license.moddoctor.workers.dev";
 const LANGS = {ru: "Русский", en: "English", pt: "Português", es: "Español", de: "Deutsch", fr: "Français", pl: "Polski", it: "Italiano", uk: "Українська"};
 const T = {
-  ru: {h1: "PRO-версия Sims 4 Mod Doctor", lead: "Вся автоматика: автопоиск сломанного мода, «День патча», новые моды с проверкой в игре, порядок в CC и многое другое. Проверка модов остаётся бесплатной навсегда.",
+  ru: {ref: "🎁 Тебя пригласил друг — к ключу на 1 месяц, 3 месяца или 1 год добавится +7 дней PRO в подарок", h1: "PRO-версия Sims 4 Mod Doctor", lead: "Вся автоматика: автопоиск сломанного мода, «День патча», новые моды с проверкой в игре, порядок в CC и многое другое. Проверка модов остаётся бесплатной навсегда.",
     month: "1 месяц", quarter: "3 месяца", year: "1 год", lifetime: "Навсегда", best: "выгодно", renew: "Продление ключа",
     pay: "Оплата — через @CryptoBot в Telegram (USDT, TON, BTC и другие монеты). Нет крипты — купи USDT за местные деньги прямо в боте (раздел P2P). Ключ появится на этой странице сам, сразу после оплаты.",
     wait: "Жду оплату…", wait2: "Оплати счёт в @CryptoBot — эту страницу не закрывай, ключ появится здесь.", open: "Открыть счёт ещё раз",
@@ -67,7 +69,7 @@ const T = {
     steps: ["Открой Sims 4 Mod Doctor.", "Внизу главного экрана нажми «💎 PRO-версия» → «У меня есть ключ».", "Вставь ключ (Ctrl+V) — PRO включится сразу."],
     renewed: "Ключ продлён — в программе ничего вводить не нужно, новый срок подтянется сам.",
     err: "Не получилось создать счёт — попробуй через минуту.", expired: "Счёт устарел — выбери тариф ещё раз."},
-  en: {h1: "Sims 4 Mod Doctor PRO", lead: "All the automation: auto search for the broken mod, Patch Day, new mods tested in game, tidy CC and much more. Checking mods stays free forever.",
+  en: {ref: "🎁 A friend invited you — a 1-month, 3-month or 1-year key gets +7 days of PRO as a gift", h1: "Sims 4 Mod Doctor PRO", lead: "All the automation: auto search for the broken mod, Patch Day, new mods tested in game, tidy CC and much more. Checking mods stays free forever.",
     month: "1 month", quarter: "3 months", year: "1 year", lifetime: "Lifetime", best: "best value", renew: "Key renewal",
     pay: "Payment goes through @CryptoBot in Telegram (USDT, TON, BTC and other coins). No crypto? Buy USDT with your local money right in the bot (P2P section). Your key appears on this page automatically right after payment.",
     wait: "Waiting for payment…", wait2: "Pay the invoice in @CryptoBot — keep this page open, your key will appear here.", open: "Open the invoice again",
@@ -75,7 +77,7 @@ const T = {
     steps: ["Open Sims 4 Mod Doctor.", "At the bottom of the main screen click “💎 PRO version” → “I have a key”.", "Paste the key (Ctrl+V) — PRO turns on right away."],
     renewed: "Your key is renewed — nothing to enter in the app, the new term is picked up automatically.",
     err: "Couldn't create the invoice — try again in a minute.", expired: "The invoice expired — pick a plan again."},
-  pt: {h1: "Sims 4 Mod Doctor PRO", lead: "Toda a automação: busca automática do mod quebrado, Dia do Patch, mods novos testados no jogo, CC organizado e muito mais. A verificação de mods continua grátis para sempre.",
+  pt: {ref: "🎁 Um amigo te convidou — a chave de 1 mês, 3 meses ou 1 ano ganha +7 dias de PRO de presente", h1: "Sims 4 Mod Doctor PRO", lead: "Toda a automação: busca automática do mod quebrado, Dia do Patch, mods novos testados no jogo, CC organizado e muito mais. A verificação de mods continua grátis para sempre.",
     month: "1 mês", quarter: "3 meses", year: "1 ano", lifetime: "Para sempre", best: "melhor valor", renew: "Renovação da chave",
     pay: "O pagamento é feito pelo @CryptoBot no Telegram (USDT, TON, BTC e outras moedas). Sem cripto? Compre USDT com dinheiro local no próprio bot (seção P2P). A chave aparece nesta página sozinha, logo após o pagamento.",
     wait: "Aguardando o pagamento…", wait2: "Pague a fatura no @CryptoBot — não feche esta página, a chave vai aparecer aqui.", open: "Abrir a fatura de novo",
@@ -83,7 +85,7 @@ const T = {
     steps: ["Abra o Sims 4 Mod Doctor.", "Na parte de baixo da tela principal, clique em \"💎 Versão PRO\" → \"Tenho uma chave\".", "Cole a chave (Ctrl+V) — o PRO é ativado na hora."],
     renewed: "Sua chave foi renovada — não precisa digitar nada no programa, o novo prazo entra sozinho.",
     err: "Não foi possível criar a fatura — tente de novo em um minuto.", expired: "A fatura expirou — escolha um plano de novo."},
-  es: {h1: "Sims 4 Mod Doctor PRO", lead: "Toda la automatización: búsqueda automática del mod roto, Día del parche, mods nuevos probados en el juego, CC ordenado y mucho más. Revisar mods sigue siendo gratis para siempre.",
+  es: {ref: "🎁 Te invitó un amigo: la clave de 1 mes, 3 meses o 1 año recibe +7 días de PRO de regalo", h1: "Sims 4 Mod Doctor PRO", lead: "Toda la automatización: búsqueda automática del mod roto, Día del parche, mods nuevos probados en el juego, CC ordenado y mucho más. Revisar mods sigue siendo gratis para siempre.",
     month: "1 mes", quarter: "3 meses", year: "1 año", lifetime: "Para siempre", best: "mejor precio", renew: "Renovación de la clave",
     pay: "El pago se hace con @CryptoBot en Telegram (USDT, TON, BTC y otras monedas). ¿Sin cripto? Compra USDT con tu moneda local en el propio bot (sección P2P). La clave aparece en esta página sola, justo después del pago.",
     wait: "Esperando el pago…", wait2: "Paga la factura en @CryptoBot; no cierres esta página, la clave aparecerá aquí.", open: "Abrir la factura otra vez",
@@ -91,7 +93,7 @@ const T = {
     steps: ["Abre Sims 4 Mod Doctor.", "Abajo en la pantalla principal pulsa «💎 Versión PRO» → «Tengo una clave».", "Pega la clave (Ctrl+V): el PRO se activa al instante."],
     renewed: "Tu clave está renovada: no hace falta escribir nada en el programa, el nuevo plazo se aplica solo.",
     err: "No se pudo crear la factura; inténtalo de nuevo en un minuto.", expired: "La factura caducó; elige un plan otra vez."},
-  de: {h1: "Sims 4 Mod Doctor PRO", lead: "Die ganze Automatik: automatische Suche nach dem kaputten Mod, Patch-Tag, neue Mods mit Test im Spiel, Ordnung im CC und vieles mehr. Mods prüfen bleibt für immer kostenlos.",
+  de: {ref: "🎁 Ein Freund hat dich eingeladen – ein Schlüssel für 1 Monat, 3 Monate oder 1 Jahr bekommt +7 Tage PRO geschenkt", h1: "Sims 4 Mod Doctor PRO", lead: "Die ganze Automatik: automatische Suche nach dem kaputten Mod, Patch-Tag, neue Mods mit Test im Spiel, Ordnung im CC und vieles mehr. Mods prüfen bleibt für immer kostenlos.",
     month: "1 Monat", quarter: "3 Monate", year: "1 Jahr", lifetime: "Für immer", best: "am günstigsten", renew: "Schlüssel verlängern",
     pay: "Bezahlt wird über @CryptoBot in Telegram (USDT, TON, BTC und andere Coins). Keine Krypto? Kauf USDT mit deiner Landeswährung direkt im Bot (Bereich P2P). Dein Schlüssel erscheint nach der Zahlung automatisch auf dieser Seite.",
     wait: "Warte auf die Zahlung…", wait2: "Bezahl die Rechnung in @CryptoBot – lass diese Seite offen, der Schlüssel erscheint hier.", open: "Rechnung erneut öffnen",
@@ -99,7 +101,7 @@ const T = {
     steps: ["Öffne Sims 4 Mod Doctor.", "Klick unten auf dem Hauptbildschirm auf „💎 PRO-Version“ → „Ich habe einen Schlüssel“.", "Füg den Schlüssel ein (Strg+V) – PRO ist sofort aktiv."],
     renewed: "Dein Schlüssel ist verlängert – im Programm musst du nichts eingeben, die neue Laufzeit kommt von selbst.",
     err: "Die Rechnung konnte nicht erstellt werden – versuch es in einer Minute noch einmal.", expired: "Die Rechnung ist abgelaufen – wähl den Tarif noch einmal."},
-  fr: {h1: "Sims 4 Mod Doctor PRO", lead: "Toute l'automatisation : recherche automatique du mod cassé, Jour de patch, nouveaux mods testés en jeu, CC rangé et bien plus. La vérification des mods reste gratuite pour toujours.",
+  fr: {ref: "🎁 Un ami t'a invité — une clé d'1 mois, 3 mois ou 1 an reçoit +7 jours de PRO en cadeau", h1: "Sims 4 Mod Doctor PRO", lead: "Toute l'automatisation : recherche automatique du mod cassé, Jour de patch, nouveaux mods testés en jeu, CC rangé et bien plus. La vérification des mods reste gratuite pour toujours.",
     month: "1 mois", quarter: "3 mois", year: "1 an", lifetime: "À vie", best: "meilleur prix", renew: "Prolongation de la clé",
     pay: "Le paiement passe par @CryptoBot dans Telegram (USDT, TON, BTC et d'autres cryptos). Pas de crypto ? Achète des USDT avec ta monnaie locale directement dans le bot (section P2P). Ta clé apparaît toute seule sur cette page juste après le paiement.",
     wait: "En attente du paiement…", wait2: "Paie la facture dans @CryptoBot — garde cette page ouverte, ta clé apparaîtra ici.", open: "Rouvrir la facture",
@@ -107,7 +109,7 @@ const T = {
     steps: ["Ouvre Sims 4 Mod Doctor.", "En bas de l'écran principal, clique sur « 💎 Version PRO » → « J'ai une clé ».", "Colle la clé (Ctrl+V) — le PRO s'active tout de suite."],
     renewed: "Ta clé est prolongée — rien à saisir dans le programme, la nouvelle durée est prise en compte toute seule.",
     err: "Impossible de créer la facture — réessaie dans une minute.", expired: "La facture a expiré — choisis une offre à nouveau."},
-  pl: {h1: "Sims 4 Mod Doctor PRO", lead: "Cała automatyka: automatyczne szukanie zepsutego moda, Dzień patcha, nowe mody sprawdzane w grze, porządek w CC i wiele więcej. Sprawdzanie modów zostaje darmowe na zawsze.",
+  pl: {ref: "🎁 Zaprosił cię znajomy — klucz na 1 miesiąc, 3 miesiące lub 1 rok dostanie +7 dni PRO w prezencie", h1: "Sims 4 Mod Doctor PRO", lead: "Cała automatyka: automatyczne szukanie zepsutego moda, Dzień patcha, nowe mody sprawdzane w grze, porządek w CC i wiele więcej. Sprawdzanie modów zostaje darmowe na zawsze.",
     month: "1 miesiąc", quarter: "3 miesiące", year: "1 rok", lifetime: "Na zawsze", best: "najkorzystniej", renew: "Przedłużenie klucza",
     pay: "Płatność przez @CryptoBot w Telegramie (USDT, TON, BTC i inne monety). Nie masz krypto? Kup USDT za lokalną walutę prosto w bocie (sekcja P2P). Klucz pojawi się na tej stronie sam, zaraz po płatności.",
     wait: "Czekam na płatność…", wait2: "Opłać rachunek w @CryptoBot — nie zamykaj tej strony, klucz pojawi się tutaj.", open: "Otwórz rachunek ponownie",
@@ -115,7 +117,7 @@ const T = {
     steps: ["Otwórz Sims 4 Mod Doctor.", "Na dole ekranu głównego kliknij „💎 Wersja PRO” → „Mam klucz”.", "Wklej klucz (Ctrl+V) — PRO włączy się od razu."],
     renewed: "Klucz przedłużony — w programie nic nie trzeba wpisywać, nowy termin pojawi się sam.",
     err: "Nie udało się utworzyć rachunku — spróbuj za minutę.", expired: "Rachunek wygasł — wybierz plan jeszcze raz."},
-  it: {h1: "Sims 4 Mod Doctor PRO", lead: "Tutta l'automazione: ricerca automatica della mod rotta, Giorno della patch, nuove mod provate in gioco, CC in ordine e molto altro. Il controllo delle mod resta gratis per sempre.",
+  it: {ref: "🎁 Ti ha invitato un amico: la chiave da 1 mese, 3 mesi o 1 anno riceve +7 giorni di PRO in regalo", h1: "Sims 4 Mod Doctor PRO", lead: "Tutta l'automazione: ricerca automatica della mod rotta, Giorno della patch, nuove mod provate in gioco, CC in ordine e molto altro. Il controllo delle mod resta gratis per sempre.",
     month: "1 mese", quarter: "3 mesi", year: "1 anno", lifetime: "Per sempre", best: "più conveniente", renew: "Rinnovo della chiave",
     pay: "Il pagamento avviene tramite @CryptoBot su Telegram (USDT, TON, BTC e altre monete). Niente cripto? Compra USDT con la tua valuta direttamente nel bot (sezione P2P). La chiave compare da sola su questa pagina subito dopo il pagamento.",
     wait: "In attesa del pagamento…", wait2: "Paga la fattura in @CryptoBot: non chiudere questa pagina, la chiave comparirà qui.", open: "Riapri la fattura",
@@ -123,7 +125,7 @@ const T = {
     steps: ["Apri Sims 4 Mod Doctor.", "In basso nella schermata principale clicca «💎 Versione PRO» → «Ho una chiave».", "Incolla la chiave (Ctrl+V): il PRO si attiva subito."],
     renewed: "La chiave è rinnovata: nel programma non devi inserire nulla, la nuova scadenza arriva da sola.",
     err: "Impossibile creare la fattura: riprova tra un minuto.", expired: "La fattura è scaduta: scegli di nuovo un piano."},
-  uk: {h1: "PRO-версія Sims 4 Mod Doctor", lead: "Уся автоматика: автопошук зламаного мода, «День патча», нові моди з перевіркою в грі, лад у CC і багато іншого. Перевірка модів лишається безкоштовною назавжди.",
+  uk: {ref: "🎁 Тебе запросив друг — до ключа на 1 місяць, 3 місяці або 1 рік додасться +7 днів PRO у подарунок", h1: "PRO-версія Sims 4 Mod Doctor", lead: "Уся автоматика: автопошук зламаного мода, «День патча», нові моди з перевіркою в грі, лад у CC і багато іншого. Перевірка модів лишається безкоштовною назавжди.",
     month: "1 місяць", quarter: "3 місяці", year: "1 рік", lifetime: "Назавжди", best: "вигідно", renew: "Продовження ключа",
     pay: "Оплата — через @CryptoBot у Telegram (USDT, TON, BTC та інші монети). Немає крипти — купи USDT за гривні прямо в боті (розділ P2P). Ключ з'явиться на цій сторінці сам, одразу після оплати.",
     wait: "Чекаю на оплату…", wait2: "Оплати рахунок у @CryptoBot — не закривай цю сторінку, ключ з'явиться тут.", open: "Відкрити рахунок ще раз",
@@ -137,13 +139,38 @@ const q = new URLSearchParams(location.search);
 const RU = ["ru", "be", "kk", "ky", "tg", "hy", "az", "uz"];
 let lang = q.get("lang");
 if (!T[lang]) { const b = String(navigator.language || "").toLowerCase().split("-")[0]; lang = RU.includes(b) ? "ru" : T[b] ? b : "en"; }
-const renew = (q.get("renew") || "").trim();
+// ключ для продления приходит после «#» (новые версии программы; прежние — в ?renew=): сразу убираем его из адреса,
+// чтобы он не остался в истории браузера и не ушёл со ссылкой «поделиться»
+const hq = new URLSearchParams(location.hash.slice(1));
+const renew = (hq.get("renew") || q.get("renew") || "").trim();
+if (renew) { try { history.replaceState(null, "", location.pathname + "?lang=" + encodeURIComponent(lang)); } catch (e) { /* старый браузер */ } }
+// приглашение друга: ?ref=КОД (или код, запомненный при прошлом заходе, — 30 дней). Продление по ссылке не считается
+const REF_TTL = 30 * 864e5;
+const cleanRef = s => String(s || "").toUpperCase().replace(/[^0-9A-Z]/g, "").slice(0, 16);
+let ref = cleanRef(q.get("ref"));
+try {
+  if (ref.length >= 6) localStorage.setItem("md_ref", JSON.stringify({code: ref, t: Date.now()}));
+  else {
+    const o = JSON.parse(localStorage.getItem("md_ref") || "null");
+    ref = o && Date.now() - o.t < REF_TTL ? cleanRef(o.code) : "";
+    if (!ref) localStorage.removeItem("md_ref");
+  }
+} catch (e) { /* без памяти — только из адреса */ }
+if (ref.length < 6 || renew) ref = "";
+// плашку «+7 дней» показываем, только если сервер знает такой код (выдуманный или старый код ничего не даёт)
+let refOk = false;
+if (ref) fetch(API + "/v1/ref/check?code=" + encodeURIComponent(ref)).then(r => r.json()).then(d => {
+  refOk = !!(d && d.ok && d.known);
+  if (d && d.ok && !d.known) { try { localStorage.removeItem("md_ref"); } catch (e) { /* пусть */ } }
+  paint();
+}).catch(() => {});
 let L = T[lang], PRICES = {month: "4.99", quarter: "11.99", year: "29.99", lifetime: "69.99"};
 const ORDER = ["month", "quarter", "year", "lifetime"];
 
 function paint() {
   L = T[lang]; document.documentElement.lang = lang;
   $("#t_h1").textContent = renew ? L.renew : L.h1; $("#t_lead").textContent = L.lead; $("#t_pay").textContent = L.pay;
+  $("#refbox").textContent = L.ref; $("#refbox").classList.toggle("hide", !(ref && refOk));
   $("#t_wait").textContent = L.wait; $("#t_wait2").textContent = L.wait2; $("#paylink").textContent = L.open;
   $("#t_done").textContent = L.done; $("#copy").textContent = L.copy;
   $("#t_steps").innerHTML = L.steps.map(s => "<li>" + s.replace(/[<>&]/g, c => ({"<": "&lt;", ">": "&gt;", "&": "&amp;"}[c])) + "</li>").join("");
@@ -161,9 +188,10 @@ let poll = 0;
 async function buy(plan) {
   $("#err").textContent = ""; $("#done").classList.add("hide");
   try {
-    const r = await fetch(API + "/v1/buy", {method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify(renew ? {plan, key: renew} : {plan})});
+    const r = await fetch(API + "/v1/buy", {method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify(renew ? {plan, key: renew} : ref ? {plan, ref} : {plan})});
     const d = await r.json();
     if (!d.ok) throw new Error(d.error || L.err);
+    if (ref && d.ref === false) { refOk = false; paint(); }          // сервер код не засчитал — не обещаем неделю
     try { localStorage.setItem("md_order", JSON.stringify({order: d.order, secret: d.secret, t: Date.now()})); } catch (e) { /* без памяти */ }
     $("#paylink").href = d.pay_url; $("#wait").classList.remove("hide");
     window.open(d.pay_url, "_blank", "noopener");
@@ -174,12 +202,14 @@ function watch(order, secret) {
   clearInterval(poll);
   poll = setInterval(async () => {
     try {
-      const d = await (await fetch(`${API}/v1/order?id=${encodeURIComponent(order)}&secret=${encodeURIComponent(secret)}`)).json();
+      // секрет заказа — в теле запроса, а не в адресе
+      let d = await (await fetch(`${API}/v1/order`, {method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify({id: order, secret})})).json();
+      if (d && d.code === "not_found") d = await (await fetch(`${API}/v1/order?id=${encodeURIComponent(order)}&secret=${encodeURIComponent(secret)}`)).json();
       if (d.status === "paid") {
         clearInterval(poll); $("#wait").classList.add("hide"); $("#done").classList.remove("hide");
         $("#key").textContent = d.key || "";
         if (d.renewed) { $("#t_steps").innerHTML = "<li>" + L.renewed + "</li>"; }
-        try { localStorage.removeItem("md_order"); } catch (e) { /* пусть */ }
+        try { localStorage.removeItem("md_order"); localStorage.removeItem("md_ref"); } catch (e) { /* пусть */ }
       } else if (d.status === "expired") { clearInterval(poll); $("#wait").classList.add("hide"); $("#err").textContent = L.expired; }
     } catch (e) { /* сеть моргнула — спросим ещё раз */ }
   }, 5000);
