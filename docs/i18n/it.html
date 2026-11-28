@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Controllo mod di The Sims 4: trova la mod rotta gratis | Sims 4 Mod Doctor</title>
+<meta name="description" content="Il gioco crasha o le mod non vanno dopo una patch? App gratuita per Windows che controlla la cartella Mods di The Sims 4, trova la mod rotta con il metodo 50/50 e la isola.">
+<meta property="og:title" content="Sims 4 Mod Doctor — il Dottor Moddi cura le tue mod">
+<meta property="og:description" content="Controllo delle mod di The Sims 4 in un paio di minuti, ricerca della mod rotta, aiuto dopo le patch. Gratis per Windows.">
+<meta property="og:image" content="https://sims4moddoctor.com/img/home.webp">
+<meta property="og:url" content="https://sims4moddoctor.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://sims4moddoctor.com/">
+<link rel="icon" href="img/favicon.png">
+<link rel="alternate" hreflang="ru" href="https://sims4moddoctor.com/">
+<link rel="alternate" hreflang="en" href="https://sims4moddoctor.com/en/">
+<link rel="alternate" hreflang="pt-BR" href="https://sims4moddoctor.com/pt/">
+<link rel="alternate" hreflang="es" href="https://sims4moddoctor.com/es/">
+<link rel="alternate" hreflang="de" href="https://sims4moddoctor.com/de/">
+<link rel="alternate" hreflang="fr" href="https://sims4moddoctor.com/fr/">
+<link rel="alternate" hreflang="pl" href="https://sims4moddoctor.com/pl/">
+<link rel="alternate" hreflang="it" href="https://sims4moddoctor.com/it/">
+<link rel="alternate" hreflang="uk" href="https://sims4moddoctor.com/uk/">
+<link rel="alternate" hreflang="x-default" href="https://sims4moddoctor.com/en/">
+<script>/* язык сайта: без автопереадресации (поисковики её не любят). Выбор из меню запоминается и с главной переносит сразу; иначе — плашка «есть версия на вашем языке» */
+(function(){var L=["ru","en","pt","es","de","fr","pl","it","uk"],RU=["ru","be","kk","ky","tg","hy","az","uz"],cur=document.documentElement.lang.split("-")[0],s=null;
+function u(v){return v==="ru"?"/":"/"+v+"/"}
+function keep(v){try{localStorage.setItem("md_site_lang",v)}catch(e){}}
+try{s=localStorage.getItem("md_site_lang")}catch(e){}
+if(s){if(s!==cur&&L.indexOf(s)>=0&&(location.pathname==="/"||location.pathname==="/index.html"))location.replace(u(s));return}
+var b=String(navigator.language||"").toLowerCase().split("-")[0],w=RU.indexOf(b)>=0?"ru":L.indexOf(b)>=0?b:"";
+if(!w||w===cur)return;
+var T={ru:["Есть версия сайта на русском","Открыть"],en:["This site is available in English","Open"],pt:["Este site está disponível em português","Abrir"],es:["Este sitio está disponible en español","Abrir"],de:["Diese Seite gibt es auch auf Deutsch","Öffnen"],fr:["Ce site existe aussi en français","Ouvrir"],pl:["Ta strona jest dostępna po polsku","Otwórz"],it:["Questo sito è disponibile in italiano","Apri"],uk:["Є версія сайту українською","Відкрити"]};
+document.addEventListener("DOMContentLoaded",function(){var d=document.createElement("div");d.className="langbar";d.lang=w;d.translate=false;
+d.innerHTML="<span></span><a></a><button type=\"button\" aria-label=\"×\">×</button>";
+d.children[0].textContent=T[w][0];var a=d.children[1];a.textContent=T[w][1];a.href=u(w);a.onclick=function(){keep(w)};
+d.children[2].onclick=function(){keep(cur);d.remove()};document.body.insertBefore(d,document.body.firstChild)})})();
+function mdSiteLang(v){try{localStorage.setItem("md_site_lang",v)}catch(e){}location.href=v==="ru"?"/":"/"+v+"/"}</script>
+<script>if(/\.pages\.dev$/.test(location.hostname))location.replace("https://sims4moddoctor.com"+location.pathname+location.search+location.hash)</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbf8ff; --bg2:#f3edff; --card:#ffffff; --ink:#2a2344; --ink2:#5e577c; --line:#ebe4fb;
+  --pink:#ff6fae; --pink2:#ffd2e7; --violet:#8b6cff; --violet2:#e7e0ff; --mint:#3fcf9d; --mint2:#d4f6e9; --sky:#5aa9ff; --sun:#ffc547;
+  --sh:0 10px 30px rgba(110,80,200,.12); --sh2:0 20px 50px rgba(110,80,200,.18); --r:22px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#15121f; --bg2:#1d1830; --card:#221c35; --ink:#f1ecff; --ink2:#b5acd6; --line:#342c4f;
+  --pink2:#4a2440; --violet2:#2f2656; --mint2:#183a30; --sh:0 10px 30px rgba(0,0,0,.35); --sh2:0 20px 50px rgba(0,0,0,.45);
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Nunito,system-ui,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;font-size:17px;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.sparkles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.sparkles i{position:absolute;width:14px;height:14px;background:#fff;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);opacity:.85;animation:tw 3s ease-in-out infinite}
+@keyframes tw{0%,100%{transform:scale(.6);opacity:.4}50%{transform:scale(1.1);opacity:1}}
+@media (prefers-reduced-motion:reduce){.sparkles i{animation:none}}
+
+/* шапка */
+header.top{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:14px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:18px;text-decoration:none}
+.logo img{width:38px;height:38px;border-radius:50%;box-shadow:0 3px 10px rgba(139,108,255,.35)}
+nav.links{display:flex;gap:22px;margin-left:auto;font-weight:700;color:var(--ink2)}
+nav.links a{text-decoration:none}nav.links a:hover{color:var(--violet)}
+.langsel{font:inherit;font-weight:700;font-size:14px;color:var(--ink2);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 8px;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:800;text-decoration:none;border:0;cursor:pointer;font-size:16px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.pri{background:linear-gradient(135deg,var(--pink),var(--violet));color:#fff;box-shadow:0 10px 24px rgba(255,111,174,.35)}
+.btn.ghost{background:var(--card);color:var(--ink);box-shadow:var(--sh)}
+.btn.tg{background:#2aa3e8;color:#fff;box-shadow:0 10px 24px rgba(42,163,232,.3)}
+.btn.sm{padding:9px 16px;font-size:14px}
+@media (max-width:820px){nav.links{display:none}header.top .btn{margin-left:auto}}
+
+/* герой */
+.hero{position:relative;padding:70px 0 50px;background:radial-gradient(1200px 500px at 85% 0%,var(--pink2),transparent 60%),radial-gradient(900px 500px at 0% 30%,var(--violet2),transparent 60%),radial-gradient(800px 400px at 60% 100%,var(--mint2),transparent 60%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.pill{display:inline-flex;gap:8px;align-items:center;background:var(--card);padding:7px 14px;border-radius:999px;font-weight:800;font-size:14px;color:var(--violet);box-shadow:var(--sh)}
+h1{font-size:clamp(36px,5.4vw,62px);line-height:1.05;margin:18px 0 14px;font-weight:900;letter-spacing:-.5px}
+h1 .grad{background:linear-gradient(120deg,var(--pink),var(--violet) 55%,var(--mint));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:20px;color:var(--ink2);max-width:560px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 14px}
+.note{font-size:14px;color:var(--ink2)}
+.doc{position:relative;justify-self:center;width:min(420px,90%);aspect-ratio:1/1.05}
+.doc .blob{position:absolute;inset:0;border-radius:46% 54% 50% 50%/52% 46% 54% 48%;background:linear-gradient(145deg,#fff,#f6f0ff);box-shadow:var(--sh2);border:6px solid #fff;overflow:hidden}
+.doc .blob img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transform:scale(1.08) translateY(4%)}
+.doc .bubble{position:absolute;left:-14%;bottom:12%;background:var(--card);padding:12px 16px;border-radius:18px 18px 18px 4px;box-shadow:var(--sh2);font-weight:800;font-size:15px;max-width:230px}
+.doc .bubble b{color:var(--pink)}
+.doc .chip{position:absolute;right:-8%;top:-2%;background:var(--mint);color:#fff;font-weight:900;padding:8px 14px;border-radius:999px;box-shadow:0 8px 20px rgba(63,207,157,.4);transform:rotate(6deg)}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.doc{order:-1;width:min(320px,80%)}.doc .bubble{left:-4%}}
+
+/* полоса проблем */
+.pains{margin-top:-10px}
+.pains .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pain{background:var(--card);border-radius:var(--r);padding:20px;box-shadow:var(--sh);border:1px solid var(--line)}
+.pain .e{font-size:30px}.pain h3{margin:8px 0 4px;font-size:18px}.pain p{margin:0;color:var(--ink2);font-size:15px}
+@media (max-width:900px){.pains .grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.pains .grid{grid-template-columns:1fr}}
+
+section{padding:70px 0}
+h2{font-size:clamp(28px,3.6vw,42px);margin:0 0 10px;font-weight:900;text-align:center}
+.sub{text-align:center;color:var(--ink2);max-width:640px;margin:0 auto 34px;font-size:18px}
+
+/* функции */
+.tabs{display:flex;justify-content:center;gap:10px;margin-bottom:26px;flex-wrap:wrap}
+.tab{border:0;background:var(--card);box-shadow:var(--sh);padding:10px 18px;border-radius:999px;font:inherit;font-weight:800;cursor:pointer;color:var(--ink2)}
+.tab.on{background:linear-gradient(135deg,var(--pink),var(--violet));color:#fff}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feat{background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.feat:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.feat .shot{aspect-ratio:16/10;overflow:hidden;cursor:zoom-in;background:var(--bg2)}
+.feat .shot img{width:100%;height:100%;object-fit:cover;object-position:top}
+.feat .body{padding:18px 20px 20px}
+.feat h3{margin:0 0 6px;font-size:19px;display:flex;gap:8px;align-items:center}
+.feat p{margin:0;color:var(--ink2);font-size:15.5px}
+.badge{display:inline-block;font-size:12px;font-weight:900;padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.badge.free{background:var(--mint2);color:#159a6c}
+.badge.pro{background:linear-gradient(135deg,var(--pink),var(--violet));color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .badge.free{color:#6fe4b6}}
+.feat.hide{display:none}
+@media (max-width:980px){.feats{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.feats{grid-template-columns:1fr}}
+
+/* как это работает */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+.step{background:var(--card);border-radius:var(--r);padding:26px;box-shadow:var(--sh);position:relative}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:22px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:#fff;background:linear-gradient(135deg,var(--pink),var(--violet));box-shadow:0 6px 16px rgba(139,108,255,.4)}
+.step h3{margin:10px 0 6px}.step p{margin:0;color:var(--ink2)}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+
+/* тарифы */
+.prices{display:grid;grid-template-columns:1fr 1.25fr;gap:22px;align-items:stretch}
+.plan{background:var(--card);border-radius:28px;padding:30px;box-shadow:var(--sh);border:1px solid var(--line)}
+.plan.pro{background:linear-gradient(160deg,#fff 0%,#fff 55%,#fff3fa 100%);border:2px solid transparent;background-clip:padding-box;position:relative}
+.plan.pro::after{content:"";position:absolute;inset:-2px;border-radius:30px;padding:2px;background:linear-gradient(135deg,var(--pink),var(--violet),var(--mint));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .plan.pro{background:var(--card)}}
+.plan h3{font-size:26px;margin:0 0 4px}
+.plan .price{font-size:40px;font-weight:900}
+.plan ul{list-style:none;padding:0;margin:18px 0 0}
+.plan li{padding:6px 0 6px 30px;position:relative}
+.plan li::before{content:"✓";position:absolute;left:4px;top:5px;width:20px;height:20px;border-radius:50%;background:var(--mint2);color:#159a6c;font-weight:900;font-size:13px;display:grid;place-items:center}
+.plan.pro li::before{background:var(--violet2);color:var(--violet)}
+.terms{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
+.term{background:var(--bg2);border-radius:16px;padding:12px 8px;text-align:center}
+.term b{display:block;font-size:22px}.term span{font-size:13px;color:var(--ink2)}
+.term.best{background:linear-gradient(135deg,var(--pink),var(--violet));color:#fff}.term.best span{color:#ffe6f3}
+@media (max-width:860px){.prices{grid-template-columns:1fr}.terms{grid-template-columns:1fr 1fr}}
+
+/* FAQ */
+.faq{max-width:820px;margin:0 auto}
+details{background:var(--card);border-radius:18px;box-shadow:var(--sh);margin-bottom:12px;padding:0 22px;border:1px solid var(--line)}
+summary{cursor:pointer;font-weight:800;padding:18px 0;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::after{content:"+";font-size:24px;color:var(--violet);line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 18px;color:var(--ink2)}
+
+/* сообщество */
+.comm{background:linear-gradient(135deg,var(--violet2),var(--pink2));border-radius:32px;padding:40px;display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center;position:relative;overflow:hidden}
+.comm .avs{display:flex}.comm .avs img{width:110px;height:110px;border-radius:50%;border:5px solid #fff;box-shadow:var(--sh2)}
+.comm .avs img+img{margin-left:-28px}
+.comm h2{text-align:left}.comm p{color:var(--ink2);margin:0 0 18px}
+.comm .row{display:flex;gap:12px;flex-wrap:wrap}
+@media (max-width:760px){.comm{grid-template-columns:1fr;text-align:center}.comm h2{text-align:center}.comm .avs,.comm .row{justify-content:center}}
+
+footer{padding:40px 0 60px;color:var(--ink2);font-size:14px;text-align:center}
+footer a{color:var(--violet)}
+
+/* просмотр скриншота */
+.lb{position:fixed;inset:0;background:rgba(20,14,40,.82);display:none;align-items:center;justify-content:center;z-index:100;padding:24px;cursor:zoom-out}
+.lb.on{display:flex}.lb img{max-height:92vh;border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+/* плашка «есть версия на вашем языке» */
+.langbar{display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;padding:8px 44px 8px 16px;position:relative;background:linear-gradient(135deg,var(--pink),var(--violet));color:#fff;font-weight:800;font-size:15px}
+.langbar a{background:#fff;color:var(--violet);padding:4px 14px;border-radius:999px;text-decoration:none}
+.langbar button{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:0;color:#fff;font-size:24px;line-height:1;cursor:pointer;padding:4px 8px}
+/* шапка: всегда в одну строку */
+.logo,nav.links a,header.top .btn,.langsel{white-space:nowrap}
+.logo{flex-shrink:0}
+nav.links a[href="#how"],nav.links a[href="#community"]{display:none}
+@media (max-width:1400px){nav.links{gap:16px;font-size:16px}}
+@media (max-width:600px){header.top .wrap{gap:10px}.logo{font-size:0;gap:0}}
+@media (max-width:400px){header.top .wrap{gap:6px;padding:0 10px}header.top .btn.sm{padding:8px 11px;font-size:13px}.langsel{font-size:12px;padding:5px 3px}}
+@media (max-width:1120px){nav.links{gap:14px;font-size:15px}nav.links a[href="#faq"]{display:none}}
+@media (max-width:900px){nav.links{display:none}header.top .langsel{margin-left:auto}header.top .btn{margin-left:0}}
+</style>
+<script type="application/ld+json" data-seo="ld">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://sims4moddoctor.com/#site","name":"Sims 4 Mod Doctor","url":"https://sims4moddoctor.com/","inLanguage":"it"},{"@type":"SoftwareApplication","name":"Sims 4 Mod Doctor","url":"https://sims4moddoctor.com/it/","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Game utility","operatingSystem":"Windows 10, Windows 11","downloadUrl":"https://github.com/leva000111/Sims4ModDoctor-App/releases/latest/download/Sims4ModDoctor.exe","image":"https://sims4moddoctor.com/img/it/home.webp","description":"Il gioco crasha o le mod non vanno dopo una patch? App gratuita per Windows che controlla la cartella Mods di The Sims 4, trova la mod rotta con il metodo 50/50 e la isola.","inLanguage":"it","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"FAQPage","url":"https://sims4moddoctor.com/it/","inLanguage":"it","mainEntity":[{"@type":"Question","name":"È sicuro? Il programma non elimina niente?","acceptedAnswer":{"@type":"Answer","text":"Non elimino mai per sempre le tue mod né i salvataggi: tutto ciò che tolgo va in quarantena e torna con un pulsante. Scompare per sempre solo ciò che elimini tu con un pulsante (per esempio «Elimina le vecchie…» in quarantena), le copie vecchie oltre il limite (6 copie dei salvataggi, 2 di Mods) e la cache del gioco, che il gioco ricrea. Prima delle modifiche il programma può copiare la cartella Mods e i salvataggi. Non modifico i tuoi salvataggi finché non premi tu «Ripristina» (prima faccio una copia). Eccezioni, solo con il tuo pulsante: «Case e famiglie» mette in ordine la cartella Tray, e «Perché i mod non si vedono» può spostare in Mods file di mod trovati in saves o Tray."}},{"@type":"Question","name":"Windows si lamenta del programma: che faccio?","acceptedAnswer":{"@type":"Answer","text":"Per ora il programma non ha la firma digitale, quindi Windows può mostrare «Windows ha protetto il PC». Premi «Ulteriori informazioni» → «Esegui comunque». Scarica solo da questa pagina o dal nostro canale."}},{"@type":"Question","name":"Serve il gioco su questo computer?","acceptedAnswer":{"@type":"Answer","text":"Sì, il programma lavora con la cartella di The Sims 4 sul tuo computer: Mods, salvataggi, libreria. Va bene qualsiasi versione del gioco, da EA app o da Steam."}},{"@type":"Question","name":"Come compro la versione PRO senza cripto?","acceptedAnswer":{"@type":"Answer","text":"Premi «💎 Versione PRO» nel programma e scegli il piano: si apre una fattura in @CryptoBot. Lì, nella sezione P2P, puoi comprare USDT con la carta e pagare la fattura. La chiave di attivazione arriva da sola nel programma."}},{"@type":"Question","name":"Ho un computer nuovo: la versione PRO si trasferisce?","acceptedAnswer":{"@type":"Answer","text":"PRO funziona su un solo computer. Su quello vecchio premi «💎 Versione PRO» → «Trasferisci su un altro computer», e su quello nuovo inserisci la tua chiave. Non hai più il vecchio computer? Scrivici nella community e lo trasferiamo a mano."}},{"@type":"Question","name":"Come si aggiorna il programma?","acceptedAnswer":{"@type":"Answer","text":"La versione dal sito si aggiorna da sola all'avvio (puoi disattivarlo nelle Impostazioni); la versione del Microsoft Store la aggiorna lo Store."}},{"@type":"Question","name":"C'è un bonus per chi invita gli amici?","acceptedAnswer":{"@type":"Answer","text":"Sì, «🎁 Invita un amico» nel programma: per ogni amico che compra PRO con il tuo link o il tuo codice, +7 giorni di PRO per te e +7 per lui (se l'amico sceglie «Per sempre», la settimana va solo a te). Conta solo la prima chiave dell'amico; non contano gli acquisti dal tuo computer o dalla tua rete di casa (se ha IPv6), e da uno stesso indirizzo internet contano solo i primi due in 30 giorni."}}]}]}</script>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="logo" href="#"><img src="img/avatar_channel.webp" alt="">Sims 4 Mod Doctor</a>
+  <nav class="links"><a href="#features">Funzioni</a><a href="#how">Come funziona</a><a href="#pro">Versione PRO</a><a href="#faq">Domande</a><a href="#community">Community</a><a href="guides/" data-seo="guides">Guide</a></nav>
+  <select class="langsel" aria-label="Language" onchange="mdSiteLang(this.value)" translate="no"><option value="ru" selected>🇷🇺 Русский</option><option value="en">🇺🇸 English</option><option value="pt">🇧🇷 Português</option><option value="es">🇪🇸 Español</option><option value="de">🇩🇪 Deutsch</option><option value="fr">🇫🇷 Français</option><option value="pl">🇵🇱 Polski</option><option value="it">🇮🇹 Italiano</option><option value="uk">🇺🇦 Українська</option></select>
+  <a class="btn pri sm" href="https://github.com/leva000111/Sims4ModDoctor-App/releases/latest/download/Sims4ModDoctor.exe" download>⬇ Scarica</a>
+</div></header>
+
+<section class="hero">
+  <div class="sparkles" aria-hidden="true">
+    <i style="left:6%;top:18%"></i><i style="left:44%;top:10%;animation-delay:.6s"></i><i style="left:92%;top:30%;animation-delay:1.2s"></i>
+    <i style="left:70%;top:82%;animation-delay:.3s"></i><i style="left:18%;top:78%;animation-delay:1.8s"></i><i style="left:52%;top:60%;animation-delay:2.2s"></i>
+  </div>
+  <div class="wrap">
+    <div>
+      <span class="pill">🩺 L'assistente per le mod di The Sims 4</span>
+      <h1>Il Dottor Moddi <span class="grad">cura le tue mod</span></h1>
+      <p class="lead">Il gioco si chiude dopo un nuovo taglio di capelli? È uscita una patch e metà delle mod ha smesso di funzionare? Trovo quello che si è rotto, tolgo il superfluo e rimetto in piedi il gioco. E tutto quello che ho tolto lo recuperi con un solo clic 💚</p>
+      <div class="cta">
+        <a class="btn pri" href="https://github.com/leva000111/Sims4ModDoctor-App/releases/latest/download/Sims4ModDoctor.exe" download>⬇ Scarica gratis</a>
+        <a class="btn tg" href="https://t.me/sims4moddoctor">✈ Canale Telegram</a>
+        <a class="btn ghost" href="https://t.me/sims4moddoctor_chat">💬 Community</a>
+      </div>
+      <div class="note">Windows 10/11 · un solo file Sims4ModDoctor.exe, installazione facoltativa · il controllo delle mod è gratis per sempre</div>
+    </div>
+    <div class="doc">
+      <div class="blob"><img src="img/moddi_pose_fix.webp" alt="Dottor Moddi"></div>
+      <div class="chip">✨ gratis</div>
+      <div class="bubble">Ho trovato <b>3 problemi</b>. Ho già segnato cosa sistemare 😉</div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap pains">
+  <div class="grid">
+    <div class="pain"><div class="e">💥</div><h3>Il gioco si chiude</h3><p>Scovo la mod combinaguai: con il controllo o con la ricerca 50/50.</p></div>
+    <div class="pain"><div class="e">🔧</div><h3>È uscita una patch</h3><p>Metto da parte ciò che si è rotto e lo rimetto quando gli autori aggiornano le mod.</p></div>
+    <div class="pain"><div class="e">👻</div><h3>Le mod non si vedono</h3><p>Controllo se il gioco legge la cartella giusta e se le mod sono attive.</p></div>
+    <div class="pain"><div class="e">🐢</div><h3>Va tutto a rilento</h3><p>Ti mostro cosa appesantisce il caricamento e velocizzo il gioco.</p></div>
+  </div>
+</div>
+
+<section id="features"><div class="wrap">
+  <h2>Cosa sa fare il Dottor Moddi</h2>
+  <p class="sub">Tocca l'immagine per guardare la schermata da vicino.</p>
+  <div class="tabs" role="tablist">
+    <button class="tab on" data-f="all">Tutte</button>
+    <button class="tab" data-f="free">✅ Gratis</button>
+    <button class="tab" data-f="pro">💎 Versione PRO</button>
+  </div>
+  <div class="feats" id="feats">
+    <div class="feat" data-k="free"><div class="shot"><img loading="lazy" src="img/results.webp" alt="Controllo delle mod"></div><div class="body"><span class="badge free">Gratis</span><h3>🩺 Controllo delle mod</h3><p>In un paio di minuti do un'occhiata a tutta la cartella Mods: file rotti, script fuori posto, doppioni e versioni vecchie, codice sospetto. Le cose importanti sono già segnate: premi «Correggi».</p></div></div>
+    <div class="feat" data-k="free"><div class="shot"><img loading="lazy" src="img/bisect.webp" alt="Ricerca 50/50"></div><div class="body"><span class="badge free">Gratis</span><h3>🔍 Ricerca 50/50</h3><p>Nascondo metà dei sospettati: tu avvii il gioco e mi dici se è andata meglio. Un paio di avvii e il colpevole è preso.</p></div></div>
+    <div class="feat" data-k="pro"><div class="shot"><img loading="lazy" src="img/auto.webp" alt="Ricerca automatica"></div><div class="body"><span class="badge pro">PRO</span><h3>🤖 Ricerca automatica e riparazione automatica</h3><p>Sempre il 50/50, ma senza di te: avvio io il gioco, aspetto il caricamento, leggo gli errori e vado avanti. Tu ti godi il tè ☕</p></div></div>
+    <div class="feat" data-k="pro"><div class="shot"><img loading="lazy" src="img/patch.webp" alt="Giorno della patch"></div><div class="body"><span class="badge pro">PRO</span><h3>🔧 Giorno della patch</h3><p>Dopo un aggiornamento del gioco ti mostro cosa si è rotto e, quando lo chiedi tu, metto da parte le mod a rischio; le riporti indietro con un pulsante quando gli autori pubblicano gli aggiornamenti.</p></div></div>
+    <div class="feat" data-k="pro"><div class="shot"><img loading="lazy" src="img/newmods.webp" alt="Nuove mod"></div><div class="body"><span class="badge pro">PRO</span><h3>🧪 Nuove mod</h3><p>Estraggo gli archivi, li sistemo nelle cartelle e provo le nuove mod direttamente nel gioco, senza toccare la tua raccolta già collaudata.</p></div></div>
+    <div class="feat" data-k="pro"><div class="shot"><img loading="lazy" src="img/tr.webp" alt="Traduzioni"></div><div class="body"><span class="badge pro">PRO</span><h3>🌐 Traduzioni</h3><p>Trovo le traduzioni obsolete e quelle rimaste senza la loro mod. E posso anche tradurre una mod in russo, tenendo conto del genere dei personaggi.</p></div></div>
+    <div class="feat" data-k="pro"><div class="shot"><img loading="lazy" src="img/cc.webp" alt="Il mio CC"></div><div class="body"><span class="badge pro">PRO</span><h3>👗 Il mio CC</h3><p>Tutta la collezione, con le immagini. Ti mostro cosa non indossa nessuno e cosa non è in nessun lotto: Mods diventa più leggera.</p></div></div>
+    <div class="feat" data-k="pro"><div class="shot"><img loading="lazy" src="img/tray.webp" alt="Case e famiglie"></div><div class="body"><span class="badge pro">PRO</span><h3>🏡 Case e famiglie</h3><p>Ordine nella libreria e lista del CC mancante per le case della Galleria: basta Sim calvi.</p></div></div>
+    <div class="feat" data-k="pro"><div class="shot"><img loading="lazy" src="img/sets.webp" alt="Set di mod"></div><div class="body"><span class="badge pro">PRO</span><h3>📚 Set di mod</h3><p>Realismo per una famiglia, caos per un'altra? Scegli il set prima di giocare e io attivo quello che serve.</p></div></div>
+    <div class="feat" data-k="pro"><div class="shot"><img loading="lazy" src="img/guard.webp" alt="Guardiano"></div><div class="body"><span class="badge pro">PRO</span><h3>🛡️ Guardiano</h3><p>Una copia dei tuoi salvataggi prima di ogni partita e un avviso sulle patch — da solo, anche a programma chiuso (funziona nel programma installato; propone di installarsi al primo avvio).</p></div></div>
+    <div class="feat" data-k="pro"><div class="shot"><img loading="lazy" src="img/merge.webp" alt="Velocizza il caricamento"></div><div class="body"><span class="badge pro">PRO</span><h3>⚡ Velocizza il caricamento</h3><p>Unisco migliaia di piccoli file CC in pochi file più grandi: il gioco si apre molto più in fretta.</p></div></div>
+    <div class="feat" data-k="pro"><div class="shot"><img loading="lazy" src="img/find.webp" alt="Trova nel gioco"></div><div class="body"><span class="badge pro">PRO</span><h3>🔍 Trova nel gioco</h3><p>Da quale mod arriva questo vestito, o quella sedia che dà problemi? Un comando nella console e ti mostro i file.</p></div></div>
+    <div class="feat" data-k="pro"><div class="shot"><img loading="lazy" src="img/organize.webp" alt="Ordine in Mods"></div><div class="body"><span class="badge pro">PRO</span><h3>🗂 Ordine in Mods</h3><p>Sistemo la marea di file in cartelle ordinate. Le tue cartelle non le tocco, e «Ripristina» è sempre a portata di mano.</p></div></div>
+    <div class="feat" data-k="pro"><div class="shot"><img loading="lazy" src="img/updates.webp" alt="Aggiornamenti delle mod"></div><div class="body"><span class="badge pro">PRO</span><h3>🔄 Aggiornamenti delle mod</h3><p>Raccolgo gli avvisi di aggiornamento che le mod stesse mostrano nel gioco (serve il mini-mod «Osservatore») e installo il file scaricato al posto della vecchia versione — senza doppioni.</p></div></div>
+    <div class="feat" data-k="pro"><div class="shot"><img loading="lazy" src="img/inspect.webp" alt="Ispezione della raccolta"></div><div class="body"><span class="badge pro">PRO</span><h3>🔬 Ispezione della raccolta</h3><p>Do un'occhiata all'archivio scaricato prima dell'installazione: cosa c'è di nuovo, cosa hai già, dove la versione è più vecchia e cosa è sospetto.</p></div></div>
+    <div class="feat" data-k="free"><div class="shot"><img loading="lazy" src="img/history.webp" alt="Cronologia delle partite"></div><div class="body"><span class="badge free">Gratis</span><h3>📜 Cronologia delle partite</h3><p>Com'è andata ogni partita e cosa è cambiato nelle mod. Le partite avviate dal programma si registrano gratis, tutti gli avvii automaticamente — con il Guardiano (PRO). Si è rotto oggi? Riporto Mods a un avvio funzionante.</p></div></div>
+    <div class="feat" data-k="free"><div class="shot"><img loading="lazy" src="img/stats.webp" alt="Cosa rallenta"></div><div class="body"><span class="badge free">Gratis</span><h3>📊 Cosa rallenta</h3><p>Quanto ci mette a caricarsi il gioco, quali mod con script ragionano più a lungo di tutte e cosa non usi proprio. Serve il mini-mod «Osservatore»: un pulsante lo mette in Mods, un pulsante lo toglie.</p></div></div>
+    <div class="feat" data-k="free"><div class="shot"><img loading="lazy" src="img/saves.webp" alt="Salvataggi"></div><div class="body"><span class="badge free">Gratis</span><h3>💾 Salvataggi</h3><p>Salute dei salvataggi, copie con un clic e ripristino. Non modifico i tuoi salvataggi finché non premi tu «Ripristina» — prima faccio una copia.</p></div></div>
+    <div class="feat" data-k="free"><div class="shot"><img loading="lazy" src="img/cc.webp" alt="Tutti i miei mod"></div><div class="body"><span class="badge free">Gratis</span><h3>📁 Tutti i miei mod</h3><p>Tutta la cartella Mods con immagini, ricerca e filtri; l'elenco si può esportare in un file. Vedere e cercare è gratis; disattivare, spostare e rinominare i mod è PRO.</p></div></div>
+    <div class="feat" data-k="free"><div class="shot"><img loading="lazy" src="img/home.webp" alt="Gioca"></div><div class="body"><span class="badge free">Gratis</span><h3>▶️ Gioca</h3><p>Un controllo rapido prima della partita e l'avvio tramite EA app o Steam, con registrazione nella Cronologia delle sessioni.</p></div></div>
+    <div class="feat" data-k="free"><div class="shot"><img loading="lazy" src="img/feed.webp" alt="Cosa ho fatto"></div><div class="body"><span class="badge free">Gratis</span><h3>🕘 Quarantena e «Cosa ho fatto»</h3><p>Ogni azione ha il suo pulsante «Annulla». Non elimino né le tue mod né i salvataggi: tutto ciò che tolgo va in quarantena. Scompare per sempre solo ciò che elimini tu, le copie vecchie oltre il limite e la cache del gioco (il gioco la ricrea).</p></div></div>
+    <div class="feat" data-k="free"><div class="shot"><img loading="lazy" src="img/pathdoc.webp" alt="Perché le mod non si vedono"></div><div class="body"><span class="badge free">Gratis</span><h3>🧭 Perché le mod non si vedono</h3><p>OneDrive, impostazioni del gioco, blocchi di Windows: scopro perché il gioco non vede le mod e ti propongo come sistemare.</p></div></div>
+    <div class="feat" data-k="free"><div class="shot"><img loading="lazy" src="img/errcodes.webp" alt="Codici di errore"></div><div class="body"><span class="badge free">Gratis</span><h3>🔢 Codici di errore del gioco</h3><p>Un codice incomprensibile come 123:4a5b6c7d? Ti spiego in parole semplici cosa significa e cosa fare.</p></div></div>
+    <div class="feat" data-k="free"><div class="shot"><img loading="lazy" src="img/help.webp" alt="Rapporto per l'assistenza"></div><div class="body"><span class="badge free">Gratis</span><h3>📋 Rapporto per l'assistenza</h3><p>Un unico zip con tutto il necessario per la chat di supporto. Il nome utente di Windows è nascosto.</p></div></div>
+  </div>
+</div></section>
+
+<section id="how" style="background:var(--bg2)"><div class="wrap">
+  <h2>Come funziona</h2>
+  <p class="sub">Niente installer e niente impostazioni: tre passi e le tue mod sono sotto controllo.</p>
+  <div class="steps">
+    <div class="step"><h3>Scarica e avvia</h3><p>Un solo file per Windows. Il programma trova da solo la cartella di The Sims 4, anche se «Documenti» è su OneDrive.</p></div>
+    <div class="step"><h3>Premi «Controlla le mod»</h3><p>Dopo un paio di minuti ecco l'elenco dei problemi, in parole umane. Le cose importanti sono già spuntate.</p></div>
+    <div class="step"><h3>Correggi e gioca</h3><p>Un pulsante e il superfluo finisce in quarantena, non nel cestino. Ci hai ripensato? «Ripristina» con un clic.</p></div>
+  </div>
+</div></section>
+
+<section id="pro"><div class="wrap">
+  <h2>Gratis e PRO</h2>
+  <p class="sub">Il controllo delle mod resta gratis per sempre. La versione PRO sblocca tutta l'automazione.</p>
+  <div class="prices">
+    <div class="plan">
+      <h3>Gratis</h3><div class="price">$0</div><div class="note">per sempre, senza registrazione</div>
+      <ul><li>Controllo delle mod e correzione di ciò che trovo</li><li>Ricerca 50/50 manuale</li><li>Quarantena, copie e «Cosa ho fatto»</li><li>Salvataggi e cronologia delle partite</li><li>Guardiano, caricamento più veloce</li><li>Codici di errore e rapporto per l'assistenza</li></ul>
+      <div class="cta"><a class="btn ghost" href="https://github.com/leva000111/Sims4ModDoctor-App/releases/latest/download/Sims4ModDoctor.exe" download>⬇ Scarica</a></div>
+    </div>
+    <div class="plan pro">
+      <h3>💎 Versione PRO</h3><div class="note">tutto quello che c'è nella versione gratuita, più tutta l'automazione</div>
+      <div class="terms">
+        <div class="term"><span>1 mese</span><b>$4.99</b></div>
+        <div class="term"><span>3 mesi</span><b>$11.99</b></div>
+        <div class="term"><span>1 anno</span><b>$29.99</b></div>
+        <div class="term best"><span>per sempre</span><b>$69.99</b></div>
+      </div>
+      <ul><li>Ricerca 50/50 automatica e riparazione automatica</li><li>«Giorno della patch» e «Nuove mod» con prova nel gioco</li><li>Traduzioni e traduzione automatica in russo</li><li>«Il mio CC», «Case e famiglie», set di mod</li><li>Guardiano, caricamento più veloce</li><li>Ispezione della raccolta, aggiornamenti delle mod, «Trova nel gioco»</li></ul>
+      <p class="note" style="margin-top:14px">L'acquisto si fa direttamente nel programma: pulsante «💎 Versione PRO». Si paga tramite @CryptoBot su Telegram; se non hai cripto, compra USDT con la carta nella sezione P2P. La chiave di attivazione arriva da sola.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="faq" style="background:var(--bg2)"><div class="wrap">
+  <h2>Domande frequenti</h2>
+  <p class="sub">Non trovi la risposta? Chiedila nella nostra <a href="https://t.me/sims4moddoctor_chat">community</a> 💚</p>
+  <div class="faq">
+    <details><summary>È sicuro? Il programma non elimina niente?</summary><p>Non elimino mai per sempre le tue mod né i salvataggi: tutto ciò che tolgo va in quarantena e torna con un pulsante. Scompare per sempre solo ciò che elimini tu con un pulsante (per esempio «Elimina le vecchie…» in quarantena), le copie vecchie oltre il limite (6 copie dei salvataggi, 2 di Mods) e la cache del gioco, che il gioco ricrea. Prima delle modifiche il programma può copiare la cartella Mods e i salvataggi. Non modifico i tuoi salvataggi finché non premi tu «Ripristina» (prima faccio una copia). Eccezioni, solo con il tuo pulsante: «Case e famiglie» mette in ordine la cartella Tray, e «Perché i mod non si vedono» può spostare in Mods file di mod trovati in saves o Tray.</p></details>
+    <details><summary>Windows si lamenta del programma: che faccio?</summary><p>Per ora il programma non ha la firma digitale, quindi Windows può mostrare «Windows ha protetto il PC». Premi «Ulteriori informazioni» → «Esegui comunque». Scarica solo da questa pagina o dal nostro canale.</p></details>
+    <details><summary>Serve il gioco su questo computer?</summary><p>Sì, il programma lavora con la cartella di The Sims 4 sul tuo computer: Mods, salvataggi, libreria. Va bene qualsiasi versione del gioco, da EA app o da Steam.</p></details>
+    <details><summary>Come compro la versione PRO senza cripto?</summary><p>Premi «💎 Versione PRO» nel programma e scegli il piano: si apre una fattura in @CryptoBot. Lì, nella sezione P2P, puoi comprare USDT con la carta e pagare la fattura. La chiave di attivazione arriva da sola nel programma.</p></details>
+    <details><summary>Ho un computer nuovo: la versione PRO si trasferisce?</summary><p>PRO funziona su un solo computer. Su quello vecchio premi «💎 Versione PRO» → «Trasferisci su un altro computer», e su quello nuovo inserisci la tua chiave. Non hai più il vecchio computer? Scrivici nella community e lo trasferiamo a mano.</p></details>
+    <details><summary>Come si aggiorna il programma?</summary><p>La versione dal sito si aggiorna da sola all'avvio (puoi disattivarlo nelle Impostazioni); la versione del Microsoft Store la aggiorna lo Store.</p></details>
+    <details><summary>C'è un bonus per chi invita gli amici?</summary><p>Sì, «🎁 Invita un amico» nel programma: per ogni amico che compra PRO con il tuo link o il tuo codice, +7 giorni di PRO per te e +7 per lui (se l'amico sceglie «Per sempre», la settimana va solo a te). Conta solo la prima chiave dell'amico; non contano gli acquisti dal tuo computer o dalla tua rete di casa (se ha IPv6), e da uno stesso indirizzo internet contano solo i primi due in 30 giorni.</p></details>
+  </div>
+</div></section>
+
+<section id="community"><div class="wrap">
+  <div class="comm">
+    <div class="sparkles" aria-hidden="true"><i style="left:12%;top:20%"></i><i style="left:86%;top:24%;animation-delay:.8s"></i><i style="left:60%;top:80%;animation-delay:1.6s"></i></div>
+    <div class="avs"><img src="img/avatar_channel.webp" alt=""><img src="img/avatar_group.webp" alt=""></div>
+    <div>
+      <h2>Siamo su Telegram</h2>
+      <p>Nel canale trovi novità e aggiornamenti. Nella community, aiuto con le mod, risposte alle domande, idee e belle scoperte di CC (per ora in russo). Vieni a trovarci, da noi si sta bene ✨</p>
+      <div class="row"><a class="btn tg" href="https://t.me/sims4moddoctor">📰 Canale</a><a class="btn ghost" href="https://t.me/sims4moddoctor_chat">💬 Community</a></div>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  © Sims 4 Mod Doctor · <a href="https://github.com/leva000111/Sims4ModDoctor-App/releases/latest/download/Sims4ModDoctor.exe" download>Scarica</a> · <a href="https://github.com/leva000111/Sims4ModDoctor-App">Programma su GitHub</a> · <a href="https://t.me/sims4moddoctor">Canale</a> · <a href="https://t.me/sims4moddoctor_chat">Community</a> · <a href="guides/" data-seo="guides">Guide</a><br>
+  Sims 4 Mod Doctor è un programma indipendente, non affiliato a Electronic Arts. The Sims è un marchio di Electronic Arts Inc.
+</div></footer>
+
+<div class="lb" id="lb"><img alt=""></div>
+<script>
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===b));
+  const f=b.dataset.f;document.querySelectorAll('.feat').forEach(c=>c.classList.toggle('hide',f!=='all'&&c.dataset.k!==f));
+});
+const lb=document.getElementById('lb');
+document.querySelectorAll('.feat .shot img').forEach(i=>i.onclick=()=>{lb.querySelector('img').src=i.src;lb.classList.add('on')});
+lb.onclick=()=>lb.classList.remove('on');
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+</script>
+</body>
+</html>
